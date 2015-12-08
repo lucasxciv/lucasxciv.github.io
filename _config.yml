@@ -1,9 +1,9 @@
 # Site settings
-title: Zetsu
-email: zetsu@domain.com
-description: Um lindo tema feito para jekyll e com o <3
-baseurl: "/zetsu"
-url: "http://nandomoreira.me"
+title: Blog
+email: contato@deoliveiralucas.net
+description: Blog sobre qualquer coisa sobre programaçao
+baseurl: "http://deoliveiralucas.github.io"
+url: "http://deoliveiralucas.github.io"
 
 author:
   name     : 'Fernando Moreira'
