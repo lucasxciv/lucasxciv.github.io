@@ -6,14 +6,14 @@ baseurl: "http://deoliveiralucas.github.io"
 url: "http://deoliveiralucas.github.io"
 
 author:
-  name     : 'Fernando Moreira'
-  email    : hi@nandomoreira.me
-  url      : http://nandomoreira.me
-  facebook : http://facebook.com/fernando.dev
-  twitter  : http://twitter.com/nandomoreirame
+  name     : 'Lucas de Oliveira'
+  email    : conato@deoliveiralucas.net
+  url      : deoliveiralucas.net
+  facebook : http://facebook.com
+  twitter  : http://twitter.com
 
-github: https://github.com/nandomoreirame/zetsu
-disqus_shortname: "fernandomoreira"
+github: https://github.com/deoliveiralucas
+disqus_shortname: "deoliveiralucas"
 google_analytics: UA-52446115-1
 
 paginate: 2
