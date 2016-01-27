@@ -237,7 +237,7 @@
   @extend %clearfix;
   margin-bottom: 15px;
 
-  li:first-child {
+  li:not(:last-child) {
     margin-right: 5px;
   }
 
