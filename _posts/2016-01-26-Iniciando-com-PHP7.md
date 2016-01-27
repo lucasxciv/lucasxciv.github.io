@@ -164,7 +164,7 @@ class Exemplo {
 
 ## Extensão `mysql` removida
 
-A extensão `mysql` foi removida na versão 7 do PHP, essa que já é uma função que vinha emitindo uma mensagem de `E_DEPRECATED` desde versão 5.6, e a partir da versão 7 não será mais utilizada. Essa função foi removida principalmente por problemas relacionados a segurança.
+A extensão `mysql` foi removida na versão 7 do PHP, essa que já é uma função que vinha emitindo uma mensagem de `E_DEPRECATED` desde versão 5.6, e a partir da versão 7 não será mais utilizada. Essa extensão foi removida principalmente por problemas relacionados a segurança.
 
 ## Chamar métodos estáticos sem `static`
 
