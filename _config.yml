@@ -2,8 +2,8 @@
 title: lucas de oliveira
 email: contato@deoliveiralucas.net
 description: blog
-baseurl: ""
-url: "/"
+baseurl: "http://deoliveiralucas.github.io"
+url: "http://deoliveiralucas.github.io"
 
 author:
   name     : 'Lucas de Oliveira'
