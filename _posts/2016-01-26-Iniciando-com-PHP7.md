@@ -30,8 +30,8 @@ E o que eu mais aguardava que era a possibilidade de declarar o tipo do valor de
 Sendo assim, com o PHP 7 podemos criar funções declarando o tipo de retorno da seguinte maneira.
 
 {% highlight php startinline=true %}
-function soma(int $i, int $i) : int {
-    return $i + $i;
+function soma(int $x, int $y) : int {
+    return $x + $y;
 }
 {% endhighlight %}
 
