@@ -185,3 +185,48 @@ pre {
     padding-left: 0;
   }
 }
+
+@media (min-width: 801px) {
+  .box-main {
+    width: 80%;
+    margin: 100px auto !important;
+    line-height: 120%;
+  }
+  .box-nav {
+    display: inline;
+  }
+  .font-courier {
+    font-family: Courier new;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 496px)  {
+  .box-main {
+    width: 80%;
+    margin: 80px auto !important;
+    line-height: 120%;
+    font-size: 25px;
+  }
+  .box-nav {
+    display: inline;
+  }
+  .font-courier {
+    font-family: Courier new;
+  }
+}
+
+@media (max-width: 495px)  {
+  .box-main {
+    width: 80%;
+    margin: 20px auto !important;
+    line-height: 120%;
+    font-size: 20px;
+  }
+  .box-nav {
+    display: none !important;
+  }
+  .font-courier {
+    font-family: Courier new;
+    font-size: 22px;
+  }
+}

@@ -1,22 +1,22 @@
 # Site settings
-title: Blog
+title: lucas de oliveira
 email: contato@deoliveiralucas.net
-description: Blog sobre qualquer coisa sobre programaçao
-baseurl: "http://deoliveiralucas.github.io"
-url: "http://deoliveiralucas.github.io"
+description: blog
+baseurl: ""
+url: "/"
 
 author:
   name     : 'Lucas de Oliveira'
   email    : conato@deoliveiralucas.net
   url      : http://deoliveiralucas.net
-  facebook : http://facebook.com
-  twitter  : http://twitter.com
+  linkedin : https://br.linkedin.com/pub/lucas-de-oliveira/a0/b94/34
+  github   : https://github.com/deoliveiralucas
 
 github: https://github.com/deoliveiralucas
 disqus_shortname: "deoliveiralucas"
 google_analytics: UA-52446115-1
 
-paginate: 2
+paginate: 6
 comments: true
 paginate_path: "/page/:num"
 

@@ -5,10 +5,10 @@
     <div class="container">
 
       <h1 class="title">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a> <small>v2</small>
+        <a href="{{ site.baseurl }}/" class="font-courier">{{ site.title }}</a>
       </h1>
 
-      <nav class="navbar">
+      <nav class="navbar box-nav">
         <a href="#" class="menu-icon">
           <span></span>
           <span></span>
@@ -16,20 +16,18 @@
         </a>
 
         <ul class="nav">
-          {% for page in site.pages %}
-            {% if page.title and page.title != 'Home' %}
-            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="{{ site.author.url }}/about" target="_blank">the autor</a></li>
-          <li><a href="{{ site.github }}" target="_blank">Github</a></li>
+          <li><a href="{{ site.github }}" target="_blank" class="font-courier">Github</a></li>
         </ul>
       </nav>
     </div>
 
     {% if page.slug == 'home' %}
-      <h2 class="txt-center">
-        Welcome to <strong>{{ site.title }}</strong>!
+      <h2 class="txt-center box-main">
+        Desenvolvedor Web, Graduado em banco de dados, especializando em desenvolvimento
+        Web e Mobile e Zend Certified PHP Engineer, sempre procurando aprender mais e compartilhar o
+        conhecimento, seja no Github, nesse blog, ou em qualquer outro lugar.
+        As linguagens que mais se dedica atualmente são
+        <strong>PHP</strong> e <strong>Javascript</strong>.
       </h2>
     {% endif %}
 

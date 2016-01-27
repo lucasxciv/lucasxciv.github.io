@@ -75,6 +75,3 @@ DEPENDENCIES
   jekyll (~> 2.5.3)
   rake (~> 10.4.2)
   sass (~> 3.4.10)
-
-BUNDLED WITH
-   1.10.6
