@@ -77,7 +77,7 @@ define('USUARIO', [
     'email'
 ]);
 
-echo USUARIO[1]; // nome
+echo USUARIO[1]; // sobrenome
 {% endhighlight %}
 
 ## Classes anônimas
