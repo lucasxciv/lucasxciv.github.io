@@ -5,7 +5,7 @@ date:   2016-01-26 21:43:00
 categories: php7 características
 comments: true
 ---
-Se você programa em PHP ou acompanha as notícias sobre desenvolvimento, deve estar sabendo que o PHP 7 foi oficialmente lançado a quase dois meses, e para você que ainda não viu as novas características ou quer saber um pouco mais continue lendo este *post*, pois resolvi iniciar esse blog escrevendo e testando algumas de suas novas funcionalidades. No momento que estou escrevendo este *post*, já li vários artigos sobre o PHP 7, por sinal a grande maioria muito bom, já recebi até e-mail de cursos completos que dizem ser totalmente voltado para essa nova versão.
+Se você programa em PHP ou acompanha as notícias sobre desenvolvimento, deve estar sabendo que o PHP 7 foi oficialmente lançado a quase dois meses, e para você que ainda não viu as novas características ou quer saber um pouco mais, continue lendo este *post*, pois resolvi iniciar esse blog escrevendo e testando algumas de suas novas funcionalidades. No momento que estou escrevendo este *post*, já li vários artigos sobre o PHP 7, por sinal a grande maioria muito bom, já recebi até e-mail de cursos completos que dizem ser totalmente voltado para essa nova versão.
 
 Então vamos lá! vamos ver o que tem de novo e quais são algumas das incompatibilidades com as versões anteriores.
 
