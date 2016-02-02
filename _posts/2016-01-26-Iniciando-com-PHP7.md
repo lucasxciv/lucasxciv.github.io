@@ -17,7 +17,8 @@ Com essa nova característica podemos criar códigos bem mais consistentes, ter 
 
 Então, agora é possível fazer algo desse tipo:
 
-{% highlight ruby %} 
+{% highlight php startinline=true %}
+<?php
 function soma(int $x, int $y) {
     return $x + $y;
 }
