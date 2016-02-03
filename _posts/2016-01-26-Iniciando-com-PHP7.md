@@ -30,26 +30,29 @@ E o que eu mais aguardava que era a possibilidade de declarar o tipo do valor de
 
 Sendo assim, com o PHP 7 podemos criar funções declarando o tipo de retorno da seguinte maneira.
 
-{% highlight php startinline=true %}
+```php
+<?php
 function soma(int $x, int $y) : int {
     return $x + $y;
 }
-{% endhighlight %}
+```
 
 ## Operador *Null coalescing* `??`
 
 Acredito que essa seja uma característica que realmente será muito útil e poderá deixar o código mais limpo, apesar de fazer algo bem simples.
 Se você costuma escrever código como do exemplo a seguir para testar a existência de uma variável e atribuir um valor, será muito útil pra você:
 
-{% highlight php startinline=true %}
+```php
+<?php
 $usuario = isset($dados['usuario']) ? $dados['usuario'] : 'anonimo';
-{% endhighlight %}
+```
 
 No PHP 7 poderá ter a mesma funcionalidade escrevendo o seguinte código:
 
-{% highlight php startinline=true %}
+```php
+<?php
 $usuario = $dados['usuario'] ?? 'anonimo';
-{% endhighlight %}
+```
 
 Realmente reduziu ainda mais a quantidade de código, ficou simples e ainda no meu ponto de vista deixa o código mais limpo, muito bom!
 
@@ -57,7 +60,8 @@ Realmente reduziu ainda mais a quantidade de código, ficou simples e ainda no m
 
 Este novo operador *spaceship* que é representado por `<=>`, é usado para comparação de duas expressões, podendo ser numérico ou não. A utilização desse operador retorna -1 se o valor da esquerda for menor que o da direita, 0 se os valores forem iguais e 1 se o da esquerda for maior que o da direita, conforme mostra o exemplo a seguir:
 
-{% highlight php startinline=true %}
+```php
+<?php
 var_dump(2<=>3); // int(-1)
 var_dump(2<=>2); // int(0)
 var_dump(2<=>1); // int(1)
@@ -65,13 +69,14 @@ var_dump(2<=>1); // int(1)
 var_dump("A"<=>"a"); // int(-1)
 var_dump("a"<=>"a"); // int(0)
 var_dump("a"<=>"A"); // int(1)
-{% endhighlight %}
+```
 
 ## Criar uma constante `array` usando `define()`
 
 Com o PHP 7 é possível armazenar um `array` em uma constante e então recuperar os valores pelo índice. Na versão 5.6 também é possível fazer isso, mas apenas utilizando `const`.
 
-{% highlight php startinline=true %}
+```php
+<?php
 define('USUARIO', [
     'nome',
     'sobrenome',
@@ -79,7 +84,7 @@ define('USUARIO', [
 ]);
 
 echo USUARIO[1]; // sobrenome
-{% endhighlight %}
+```
 
 ## Classes anônimas
 
@@ -88,7 +93,8 @@ Podemos utilizar classes anônimas quando queremos criar uma classe, utilizar ap
 
 Um exemplo que achei interessante é da utilização com os *Patterns* *Subject* e *Observer*.
 
-{% highlight php startinline=true %}
+```php
+<?php
 interface IObserver {
     public function update(ISubject $subject);
 }
@@ -136,32 +142,34 @@ $cliente->attach(new class implements IObserver {
 });
 
 $cliente->updateNome("Teste classe anônima");
-{% endhighlight %}
+```
 
 ## Agrupando declarações de `use`
 
 Com o PHP 7 é possível agrupar a importação de classes de um mesmo `namespace`.
 
-{% highlight php startinline=true %}
+```php
+<?php
 use exemplo\namespace\ {
     ClasseA as a,
     ClasseB,
     ClasseC
 };
-{% endhighlight %}
+```
 
 ## Construtor depreciado PHP 4
 
 Não sei se você conhecia ou já tinha utilizado este tipo de construtor, pois foi introduzido na versão 4 do PHP e não é comum ser utilizado atualmente, mas é possível criar um construtor utilizando o mesmo nome da classe como é feito em outras linguagens de programação, porém essa funcionalidade a partir da versão 7 está depreciada e irá emitir um `E_DEPRECATED` caso seja utilizada, e será removida em futuras versões do PHP.
 O recomendado é que utilize `__construct` para criação de construtores.
 
-{% highlight php startinline=true %}
+```php
+<?php
 class Exemplo {
     public function Exemplo() {
         echo 'Construtor executado';
     }
 }
-{% endhighlight %}
+```
 
 ## Extensão `mysql` removida
 
@@ -171,7 +179,8 @@ A extensão `mysql` foi removida na versão 7 do PHP, essa que já é uma funç�
 
 O PHP aceita que chame métodos como estáticos mesmo que não seja declarado como `static`, porém isso a partir da versão 7 está emitindo uma mensagem de `E_DEPRECATED` e será removido no futuro.
 
-{% highlight php startinline=true %}
+```php
+<?php
 class Classe {
     function metodo() {
         echo 'Não sou um método estático!';
@@ -179,7 +188,7 @@ class Classe {
 }
 
 Classe::metodo();
-{% endhighlight %}
+```
 
 ## Desempenho
 
