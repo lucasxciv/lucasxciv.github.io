@@ -27,5 +27,4 @@ sass:
 
 # Build settings
 markdown  : kramdown
-highlighter: rouge
 permalink : /:title/
