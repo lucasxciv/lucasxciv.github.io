@@ -135,6 +135,7 @@ class ClienteSubject implements ISubject {
 $cliente = new ClienteSubject();
 
 // Agora vamos usar uma classe anônima
+
 $cliente->attach(new class implements IObserver {
     public function update(ISubject $subject) {
         printf('Cliente %s atualizado', $subject->getNome());
