@@ -71,7 +71,7 @@ echo $quantidadeDias; // 31
 
 ## Quantidade de dias uteis
 
-Com o PHP é bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso obter o *timestamp* das datas de início e fim, logo em seguida executar um *loop* que irá verificar se é dia útil ou não, caso seja, apenas será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
+Com o PHP é bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso obter o *timestamp* das datas de início e fim, logo em seguida executar um *loop* que irá verificar se é dia útil ou não, caso seja, será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
 
 Executei dois exemplos, o primeiro passei por parâmetro somente o intervalo de data que gostaria de saber a quantidade de dias uteis, já no segundo exemplo foi passado também um `array` com as datas referentes aos feriados.
 
@@ -117,7 +117,7 @@ Perceba que em nenhum dos exemplos anteriores me importei com a formatação da 
 
 ## Formatando datas
 
-É comum quando estamos desenvolvendo algum sistema e precisamos converter datas, por exemplo, do formato do banco de dados para o formato do Brasil, ou vice-versa. Para isso o PHP permite executar essa tarefa de diferentes maneiras, a seguir vou mostrar algumas formas de formatar utilizando funções de data, ou apenas utilizando funções do PHP que não são especificamente para se trabalhar com datas, mas que também funciona :).
+É comum quando estamos desenvolvendo algum sistema e precisamos converter datas, por exemplo, do formato do banco de dados para o formato do Brasil, ou vice-versa. Para isso o PHP permite executar essa tarefa de diferentes maneiras, a seguir vou mostrar algumas formas de formatar utilizando funções de data, ou utilizando funções do PHP que não são especificamente para se trabalhar com datas, mas que também funciona :).
 
 Utilizando a classe `DateTime()`
 
@@ -166,7 +166,7 @@ echo $dataFormatada; // 2016-01-01
 
 ## Traduzindo datas com `strftime()`
 
-Podemos utilizar a função `strftime()` para exibir as datas em português, já que por padrão as funções retornam as descrições apenas em inglês, para fazer isso precisamos primeiramente configurar o local com a função `setlocale()` e então utilizar a função `strftime()` passando o formato e o *timestamp* como parâmetros para formatar a data, lembrando o *timezone* deve estar configurado também.
+Podemos utilizar a função `strftime()` para exibir as datas em português, já que por padrão as funções retornam as descrições em inglês, para fazer isso precisamos primeiramente configurar o local com a função `setlocale()` e então utilizar a função `strftime()` passando o formato e o *timestamp* como parâmetros para formatar a data, lembrando o *timezone* deve estar configurado também.
 
 ```php
 <?php
