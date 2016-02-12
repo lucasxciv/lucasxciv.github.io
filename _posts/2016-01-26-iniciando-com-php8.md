@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Trabalhando com datas no PHP"
-date:   2016-02-13 21:54:00
-categories: php trabalhando datas
+title:  "Iniciando com PHP 7"
+date:   2016-01-26 21:43:00
+categories: php7 características
 comments: true
 ---
 Com o PHP é possivel trabalhar com datas de varias formas, podemos utilizar funções, como, `date()`, `time()`, `strtotime()`, `mktime()`, ou a classe `DateTime` que também é muito poderosa e disponibiliza recursos que realmente facilitam muito
