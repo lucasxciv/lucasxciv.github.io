@@ -5,20 +5,20 @@ date:   2016-02-10 22:50:00
 categories: php trabalhando datas
 comments: true
 ---
-Com o PHP é possivel trabalhar com datas de varias formas, podemos utilizar funções, como, `date()`, `time()`, `strtotime()`, `mktime()`, ou a classe `DateTime` que também é muito poderosa e disponibiliza recursos que realmente facilitam muito
+Com o PHP é possivel trabalhar com datas de varias formas, podemos utilizar funções, como, `date()`, `time()`, `strtotime()`, `mktime()`, ou a classe `DateTime()` que também é muito poderosa e disponibiliza recursos que realmente facilitam muito
 a manipulação de datas. Além disso, existem várias bibliotecas desenvolvidas pela comunidade PHP que também podem nos ajudar muito quando precisamos manipular datas, porém não será utilizado nesse *post*, mas que poderá ser conteúdo um próximo.
 
 Nesse *post* vou mostrar algumas soluções de problemas que podemos encontrar durante o desenvolvimento de sistemas.
 
-## Definindo o `timezone`
+## Definindo o *timezone*
 
-Antes de começar a utilizar as funções ou classes do PHP para manipular as datas, é importante configurar o `timezone` do PHP, pois, caso contrário, podemos ter problema com datas ou horários incorretos, ou ainda ter uma mensagem de `E_WARNING` toda vez que for utilizar algum recurso do PHP para trabalhar as datas.
-Podemos definir o `timezone` padrão do PHP alterando uma linha no arquivo `php.ini` de `;date.timezone =` para `date.timezone = America/Sao_Paulo` ou adicionando um comando `date_default_timezone_set('America/Sao_Paulo');` no início do *script*. É possível configurar o PHP de acordo com o seu `timezone`, conforme mostra a [lista de `timezones` suportados](http://php.net/manual/pt_BR/timezones.php) no site do PHP.
+Antes de começar a utilizar as funções ou classes do PHP para manipular as datas, é importante configurar o *timezone* do PHP, pois caso contrário, podemos ter problemas com datas ou horários incorretos, ou ainda ter uma mensagem de `E_WARNING` toda vez que for utilizar algum recurso do PHP para trabalhar as datas.
+Podemos definir o *timezone* padrão do PHP alterando uma linha no arquivo `php.ini` de `;date.timezone =` para `date.timezone = America/Sao_Paulo` ou adicionando um comando `date_default_timezone_set('America/Sao_Paulo');` no início do *script*. Além disso, é possível configurar o PHP de acordo com o seu *timezone*, conforme mostra a [lista de `timezones` suportados](http://php.net/manual/pt_BR/timezones.php) no site do PHP.
 
 ## Diferença de dias entre datas
 
 Vou mostrar algumas maneiras de encontrar a quantidade de dias entre datas.
-A primeira é utilizando o `mktime()` para pegar o *timestamp* das datas de início e fim, logo após devemos calcular a data de fim menos a data início, assim temos o resultado da diferença em *timestamp*, por último é preciso apenas converter esse resultado para dias.
+A primeira é utilizando o `mktime()` para pegar o *timestamp* das datas de início e fim, logo após devemos subtrair a data de fim pela data de início, assim temos o resultado da diferença em *timestamp*, por último é preciso apenas converter esse resultado para dias.
 
 ```php
 <?php
@@ -71,7 +71,7 @@ echo $quantidadeDias; // 31
 
 ## Quantidade de dias uteis
 
-É bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso apenas obter o *timestamp* das datas de início e fim, e então logo em seguida executar um *loop* que irá verificar se o dia é útil ou não, caso seja, apenas será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
+Com o PHP é bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso apenas obter o *timestamp* das datas de início e fim, logo em seguida executar um *loop* que irá verificar se é dia útil ou não, caso seja, apenas será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
 
 Executei dois exemplos, o primeiro passei por parâmetro apenas o intervalo de data que gostaria de saber a quantidade de dias uteis, já no segundo exemplo foi passado também um `array` com as datas referentes aos feriados.
 
@@ -113,11 +113,11 @@ $feriados = [
 echo getDiasUteis('2015-12-07', '2016-01-08', $feriados); // 23
 ```
 
-Perceba que em nenhum dos exemplos anteriores não me importei com a formatação da data, utilizei o formato que normalmente é utilizado apenas pelo banco de dados por padrão, isso por que a seguir veremos algumas maneiras de formatar datas.
+Perceba que em nenhum dos exemplos anteriores me importei com a formatação da data, utilizei o formato que normalmente é utilizado apenas pelo banco de dados por padrão, isso por que a seguir veremos algumas maneiras de formatar datas.
 
 ## Formatando datas
 
-É comum quando estamos desenvolvendo algum sistema e precisamos converter datas, por exemplo, do formato do banco de dados para o formato do Brasil, ou vice-versa. Para isso o PHP possui diferentes formas para que possamos fazer isso, a seguir vou mostrar algumas formas de se fazer isso utilizando funções de data, ou apenas utilizando funções do PHP que não são especificamente para se trabalhar com datas, mas que também funciona :).
+É comum quando estamos desenvolvendo algum sistema e precisamos converter datas, por exemplo, do formato do banco de dados para o formato do Brasil, ou vice-versa. Para isso o PHP permite executar essa tarefa de diferentes maneiras, a seguir vou mostrar algumas formas de formatar utilizando funções de data, ou apenas utilizando funções do PHP que não são especificamente para se trabalhar com datas, mas que também funciona :).
 
 Utilizando a classe `DateTime()`
 
@@ -166,7 +166,7 @@ echo $dataFormatada; // 2016-01-01
 
 ## Traduzindo datas com `strftime()`
 
-Podemos utilizar a função `strftime()` para exibir as datas em português, já que por padrão as funções retornam as descrições apenas em inglês, para fazer isso precisamos apenas configurar o local com a função `setlocale()` e então utilizar a função `strftime()` passando o formato e o *timestamp* com parametro para formatar a data, lembrando o `timezone` deve estar configurado também.
+Podemos utilizar a função `strftime()` para exibir as datas em português, já que por padrão as funções retornam as descrições apenas em inglês, para fazer isso precisamos primeiramente configurar o local com a função `setlocale()` e então utilizar a função `strftime()` passando o formato e o *timestamp* como parâmetros para formatar a data, lembrando o *timezone* deve estar configurado também.
 
 ```php
 <?php
@@ -190,7 +190,7 @@ echo $dataTraduzida; // sexta-feira, 25 de dezembro de 2015
 
 ## Utilizando mais `strtotime()` e `DateTime()`
 
-A função `strtotime()` e a class `DateTime()` realmente nos ajudam muito a trabalhar com datas, por isso vou mostrar mais algumas de suas funcionalidades, pois acho bem legal a forma que podemos interagir com essas duas ferramentas do PHP.
+A função `strtotime()` e a classe `DateTime()` realmente nos ajudam muito a trabalhar com datas, por isso vou mostrar mais algumas de suas funcionalidades, pois acho bem legal a forma que podemos interagir com essas duas ferramentas do PHP.
 
 ```php
 <?php
@@ -228,7 +228,8 @@ echo date("d/m/Y", $dateTime->getTimestamp()) . PHP_EOL;
 ## Mais informações
 
 É fundamental entender cada função utilizada nesse *post* para que se possa ter cada vez mais facilidade para manipular datas. **Lembrando** que é sempre importante validar as datas antes fazer alguma manipulação, nos exemplos desse *post* não estou validando pois o principal intuído é mostrar como podemos trabalhar com datas.
-Nos *links* a seguir podemos encontrar mais informações sobre cada uma das funções de data utilizadas nos exemplos:
+
+Nos *links* a seguir podemos encontrar mais informações sobre cada uma das funções de data utilizadas nos exemplos.
 
 - [`date()`](http://php.net/manual/pt_BR/function.date.php)
 - [`strtotime()`](http://php.net/manual/pt_BR/function.strtotime.php)
