@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Trabalhando com datas no PHP"
-date:   2016-02-13 22:50:00
+date:   2016-02-15 22:50:00
 categories: php7 características
 comments: true
 ---
