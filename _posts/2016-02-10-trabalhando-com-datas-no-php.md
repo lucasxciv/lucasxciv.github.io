@@ -71,9 +71,9 @@ echo $quantidadeDias; // 31
 
 ## Quantidade de dias uteis
 
-Com o PHP é bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso apenas obter o *timestamp* das datas de início e fim, logo em seguida executar um *loop* que irá verificar se é dia útil ou não, caso seja, apenas será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
+Com o PHP é bem simples desenvolver uma função para contar a quantidade de dias uteis (seg. à sex.) utilizando o `strtotime()`. Para isso é preciso obter o *timestamp* das datas de início e fim, logo em seguida executar um *loop* que irá verificar se é dia útil ou não, caso seja, apenas será acrescentado um ao contador. Além disso, deixei um parâmetro como opcional para que seja passado os feriados, caso seja necessário.
 
-Executei dois exemplos, o primeiro passei por parâmetro apenas o intervalo de data que gostaria de saber a quantidade de dias uteis, já no segundo exemplo foi passado também um `array` com as datas referentes aos feriados.
+Executei dois exemplos, o primeiro passei por parâmetro somente o intervalo de data que gostaria de saber a quantidade de dias uteis, já no segundo exemplo foi passado também um `array` com as datas referentes aos feriados.
 
 ```php
 <?php
@@ -113,7 +113,7 @@ $feriados = [
 echo getDiasUteis('2015-12-07', '2016-01-08', $feriados); // 23
 ```
 
-Perceba que em nenhum dos exemplos anteriores me importei com a formatação da data, utilizei o formato que normalmente é utilizado apenas pelo banco de dados por padrão, isso por que a seguir veremos algumas maneiras de formatar datas.
+Perceba que em nenhum dos exemplos anteriores me importei com a formatação da data, utilizei o formato que normalmente é utilizado pelo banco de dados por padrão, isso por que a seguir veremos algumas maneiras de formatar datas.
 
 ## Formatando datas
 

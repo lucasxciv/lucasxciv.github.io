@@ -194,7 +194,7 @@ Classe::metodo();
 
 Claro que eu não poderia deixar de falar do incrível desempenho que o PHP 7 vem demostrando em diversos *benchmarks* que estão sendo realizados tanto por usuários da linguagem quanto pela própria [Zend](http://www.zend.com/en/resources/php7_infographic). Com o nova versão do motor *Zend Engine* o PHP vem mostrando um grande aumento no desempenho quando comparado com a versão 5.6 ou até mesmo com o HHVM que é a versão do PHP criada pelo *facebook* justamente para ter melhor performance.
 
-## Quer saber mais
+## Quer saber mais?
 
 O PHP incluiu varias outras características na nova versão, caso você tenha se interessado e queira saber mais, pode dar uma olhada no site oficial **[php.net](http://php.net)**, lá você encontra tudo que foi adicionado, alterado e removido. O que eu mostrei aqui foi algumas dessas novas características que achei interessante, espero que tenha gostado, qualquer dúvida ou sugestão, pode me mandar.
 
