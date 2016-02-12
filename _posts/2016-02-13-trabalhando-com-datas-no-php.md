@@ -200,7 +200,7 @@ echo date("d/m/Y H:i:s", strtotime("2016-01-01 tomorrow noon")) . PHP_EOL;
 echo date("d/m/Y H:i:s", strtotime("2016-01-01 tomorrow noon +1 day")) . PHP_EOL;
 echo date("d/m/Y", strtotime("2016-01-01 last friday")) . PHP_EOL;
 
-// Saida
+// Saída
 // 15/02/2016
 // 02/01/2016 12:00:00
 // 03/01/2016 12:00:00
