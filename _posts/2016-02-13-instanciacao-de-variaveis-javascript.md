@@ -127,7 +127,7 @@ Instanciação usando uma IIFE pode ser utilizado passando parâmetros ou não, 
 
 ```js
 (function() {
-	alert('Funciona!!');
+    alert('Funciona!!');
 })();
 ```
 
@@ -135,7 +135,7 @@ Instanciação usando uma IIFE pode ser utilizado passando parâmetros ou não, 
 
 ```js
 (function(param) {
-    alert('Funciona!! e como ' + param);
+    alert('Funciona!! e com ' + param);
 })('parâmetro');
 ```
 
