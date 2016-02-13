@@ -28,6 +28,7 @@ var varDeclarada;
 É importante deixar claro também que **Inicializar** uma variável é diferente de **Declarar**, conforme mostrado no **Exemplo B**, onde o Hoisting é aplicado apenas para declaração de variáveis.
 
 - Exemplo B:
+
 ```js
 var varInicializada = 20; // Variável inicializada
 varDeclarada = 50;
@@ -41,6 +42,7 @@ var varDeclarada; // Variável declarada
 Para funções, tanto o nome quanto o corpo da função é movida para o topo, o **Exemplo C** mostra como funciona.
 
 - Exemplo C:
+
 ```js
 funcaoHoisted(); // Executa a função 'funcaoHoisted' escrita no final do script
 
@@ -54,6 +56,7 @@ function funcaoHoisted() {
 Um Closure é basicamente uma função criada dentro de outra função (ou função interior) que tem acesso aos parâmetro da função exterior. Em geral, o Closure tem acesso a variáveis do seu próprio escopo, do escopo da função exterior e também as variáveis globais. No **Exemplo D** podemos ver como funciona uma Closure.
 
 - Exemplo D:
+
 ```js
 function funcaoExerior(paramFuncaoExterior) {
     var variavelFuncaoExterior = "Variavel da Função exterior, ";
@@ -76,6 +79,7 @@ alert(funcaoExerior("Paramentro função exterior, "));
 Uma variável Global é declarada fora de um escopo, e quando criada pode ser acessada de dentro de qualquer escopo do código. Desta forma, é importante ter cuidado ao utilizar variável Global. O **Exemplo E** nos mostra o funcionamento de uma variável Global.
 
 - Exemplo E:
+
 ```js
 var variavelGlobal = 1;
 
@@ -92,6 +96,7 @@ alert(variavelGlobal); // será impresso 2
 Quando passamos variáveis por parâmetro fazemos referência a variáveis que são passadas na assinatura de uma função. Uma variável passada por parâmetro pode ser acessada somente dentro do escopo da própria função, mesmo que a variável seja uma Global, como mostra o **Exemplo F** e **Exemplo G**.
 
 - Exemplo F:
+
 ```js
 function funcao(param1, param2){
 	alert('Parametro 1: ' + param1 + ' / Parametro 2: ' + param2);
@@ -101,6 +106,7 @@ funcao('Argumento1', 'Argumento2'); // será impresso 'Parametro 1: Argumento1 /
 ```
 
 - Exemplo G:
+
 ```js
 var variavelGlobal = 'Global';
 
@@ -118,6 +124,7 @@ O IIFE significa *Immediately-invoked function expression*, também conhecido co
 Instanciação usando uma IIFE pode ser utilizando passando parâmetros ou não, os exemplos **Exemplo H** e **Exemplo I** nos mostram como utilizar.
 
 - Exemplo H:
+
 ```js
 (function() {
 	alert('Funciona!!');
@@ -125,6 +132,7 @@ Instanciação usando uma IIFE pode ser utilizando passando parâmetros ou não,
 ```
 
 - Exemplo I:
+
 ```js
 (function(param) {
     alert('Funciona!! e como ' + param);
