@@ -121,7 +121,7 @@ alert(variavelGlobal); // será impresso 'Global'
 ## Instanciação usando uma IIFE
 
 O IIFE significa *Immediately-invoked function expression*, também conhecido como função imediata. Como o nome sugere, ela é uma função que é executada imediatamente após a sua criação. Podemos utilizar IIFE para encapsular funções e variáveis, assim evitamos poluição no nosso escopo global e possíveis conflitos de variáveis ou funções com o mesmo nome.
-Instanciação usando uma IIFE pode ser utilizando passando parâmetros ou não, os exemplos **Exemplo H** e **Exemplo I** nos mostram como utilizar.
+Instanciação usando uma IIFE pode ser utilizado passando parâmetros ou não, os exemplos **Exemplo H** e **Exemplo I** nos mostram como utilizar.
 
 - Exemplo H:
 
