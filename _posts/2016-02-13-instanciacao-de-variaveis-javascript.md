@@ -16,7 +16,7 @@ Neste artigo veremos algumas funcionalidades fundamentais utilizadas em Javascri
 Quando uma variável é declarada no Javascript ela é por padrão movida para o topo do escopo atual, ou seja, independente de onde a variável seja declarada no código será o mesmo que declarar no topo, isso é chamado Hoisting. O **Exemplo A**  mostra mais claramente o funcionamento do Hoisting.
 
 - Exemplo A:
-```javascript
+```
 varDeclarada = 50;
 
 alert(varDeclarada); // Será impresso 50
