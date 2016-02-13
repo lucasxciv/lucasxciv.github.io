@@ -141,7 +141,7 @@ Instanciação usando uma IIFE pode ser utilizando passando parâmetros ou não,
 
 ## Referências
 
-- Mozilla <*https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures*>
-- Javascript Brasil <*http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/*>
-- iMasters <*http://imasters.com.br/front-end/javascript/sobre-funcoes-imediatas-javascript-iife*>
-- Wikipedia <*https://en.wikipedia.org/wiki/Immediately-invoked_function_expression*>
+- [Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures)
+- [Javascript Brasil](http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade)
+- [iMasters](http://imasters.com.br/front-end/javascript/sobre-funcoes-imediatas-javascript-iife)
+- [Wikipedia](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
