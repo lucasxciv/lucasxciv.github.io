@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instanciação de Variáveis no Javascript"
+title:  "Instanciação de variáveis no Javascript"
 date:   2016-02-13 10:30:00
 categories: instanciação variaveis javascript
 comments: true
