@@ -12,7 +12,7 @@ Nesse *post* vou mostrar algumas soluções de problemas que podemos encontrar d
 ## Definindo o *timezone*
 
 Antes de começar a utilizar as funções ou classes do PHP para manipular as datas, é importante configurar o *timezone* do PHP, pois caso contrário, podemos ter problemas com datas ou horários incorretos, ou ainda ter uma mensagem de `E_WARNING` toda vez que for utilizar algum recurso do PHP para trabalhar as datas.
-Podemos definir o *timezone* padrão do PHP alterando uma linha no arquivo `php.ini` de `;date.timezone =` para `date.timezone = America/Sao_Paulo` ou adicionando um comando `date_default_timezone_set('America/Sao_Paulo');` no início do *script*. Além disso, é possível configurar o PHP de acordo com o seu *timezone*, conforme mostra a [lista de `timezones` suportados](http://php.net/manual/pt_BR/timezones.php) no site do PHP.
+Podemos definir o *timezone* padrão do PHP alterando uma linha no arquivo `php.ini` de `;date.timezone =` para `date.timezone = America/Sao_Paulo` ou adicionando um comando `date_default_timezone_set('America/Sao_Paulo');` no início do *script*. Além disso, é possível configurar o PHP de acordo com o seu *timezone*, conforme mostra a [lista de *timezones* suportados](http://php.net/manual/pt_BR/timezones.php) no site do PHP.
 
 ## Diferença de dias entre datas
 
