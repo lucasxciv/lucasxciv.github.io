@@ -31,9 +31,9 @@ Antes de iniciar o desenvolvimento é necessário ter as seguintes ferramentas i
 
 Logo em seguida é preciso baixar e configurar o Driver do MongoDB para PHP:
 
-- No Windows o download da extensão pode ser feito no site https://pecl.php.net/package/mongodb, depois de ter feito o download, o arquivo `.dll` deve ser adicionado na pasta `ext` do PHP e a linha `extension=php_mongodb.dll` deve ser adicionada no `php.ini`.
+- No Windows o download da extensão pode ser feito no [site do pecl](https://pecl.php.net/package/mongodb), depois de ter feito o download, o arquivo `.dll` deve ser adicionado na pasta `ext` do PHP e a linha `extension=php_mongodb.dll` deve ser adicionada no `php.ini`.
 
-- No Linux o driver pode ser instalado utilizando o `pecl`, conforme o descrito no repositório https://github.com/mongodb/mongo-php-library. 
+- No Linux o driver pode ser instalado utilizando o `pecl`, conforme o descrito no repositório do [mongo-php-library](https://github.com/mongodb/mongo-php-library). 
 
 Para verificar se a extensão está instalada, digite o comando `php -m` no terminal para mostrar a lista de extensões habilitadas, nessa lista deve aparecer o modulo `mongodb`.
 
@@ -104,7 +104,7 @@ Depois de instalado, criei mais algumas pastas e arquivos para que a estrutura f
  |-composer.lock
 ``` 
 
-Agora vou adicionar o script no arquivo ``bootstrap.php`` para criar a conexão com o banco de dados e configurar onde será salvo as classes de *Proxies* e *Hydrators* gerados pelo *Doctrine*, no meu caso deixarei a pasta ``/tmp`` e o nome do banco `doctrineblog`, caso não seja configurado o nome do banco utilizando o método `$config->setDefaultDB`, por padrão será criado com o nome `doctrine`.
+Agora vou adicionar o script no arquivo `bootstrap.php` para criar a conexão com o banco de dados e configurar onde será salvo as classes de *Proxies* e *Hydrators* gerados pelo *Doctrine*, no meu caso deixarei a pasta `/tmp` e o nome do banco `doctrineblog`, caso não seja configurado o nome do banco utilizando o método `$config->setDefaultDB`, por padrão será criado com o nome `doctrine`.
 
 ```php
 <?php
@@ -718,10 +718,10 @@ class PostService
 }
 ```
 
-O código completo da aplicação está disponível nesse link: http://github.com/deoliveiralucas/blog-php-mongodb-doctrine.
+O código completo da aplicação está disponível nesse link: [http://github.com/deoliveiralucas/blog-php-mongodb-doctrine](http://github.com/deoliveiralucas/blog-php-mongodb-doctrine).
 
 Podemos ver a facilidade que o Doctrine nos oferece para trabalhar com MongoDB, mas vale ressaltar também que essa facilidade pode trazer um queda de performance quando comparado com a utilização apenas das classes da extensão do PHP, que também é simples de utilizar.
 
 Eu particularmente já desenvolvi projetos que usam PHP com MongoDB, mas ainda não utilizei o Doctrine ODM, pelo motivo de que quando fui pesquisar ainda estava na versão BETA e não quis arriscar, mas se atualmente eu fosse começar um novo projeto, com certeza daria uma atenção maior a esse *framework*.
 
-A fonte principal desse post foi a documentação oficial do Doctrine ODM, caso queira saber mais recomendo que acesse, pois está bem completa:  http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/.
+A fonte principal desse post foi a documentação oficial do Doctrine ODM, caso queira saber mais recomendo que acesse, pois está bem completa:  [http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/).
