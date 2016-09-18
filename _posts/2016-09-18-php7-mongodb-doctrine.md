@@ -21,7 +21,7 @@ Sendo assim, o blog deverá ter os seguintes recursos na API:
 - Obs: todos os posts e comentários deverão ser retornados em ordem decrescente por data de criação.
 ```
 
-Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Object Document Mapper) é um framework que foi desenvolvido para o PHP 5.3.0+ e provê uma forma mais transparente de persistir objetos do PHP no MongoDB. Quem já utilizou o Doctrine ORM (Object Relational Mapper), pode ter uma facilidade maior para entender a versão para trabalhar com MongoDB, porém é importante também se que tenha conhecimento especificamente sobre o banco de dados para que possa utilizar da melhor forma tanto o framework quanto as vantagens que o MongoDB oferece. Caso não conheça e tenha interesse em aprender sobre MongoDB, existem varios cursos na internet que possa ajudar, porém dois dos que eu fiz, que são gratuitos e que me ajudaram muito, foi o da [Webschool](http://webschool.io/) e o da [MongoDB University](https://university.mongodb.com/).
+Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Object Document Mapper) é um framework que foi desenvolvido para o PHP 5.3.0+ e provê uma forma mais transparente de persistir objetos do PHP no MongoDB. Quem já utilizou o Doctrine ORM (Object Relational Mapper), pode ter uma facilidade maior para entender a versão para trabalhar com MongoDB, porém é importante também se que tenha conhecimento especificamente sobre o banco de dados para que possa utilizar da melhor forma tanto o framework quanto as vantagens que o MongoDB oferece. Caso não conheça e tenha interesse em aprender sobre MongoDB, existem vários cursos na internet que possa ajudar, porém dois dos que eu fiz, que são gratuitos e que me ajudaram muito, foi o da [Webschool](http://webschool.io/) e o da [MongoDB University](https://university.mongodb.com/).
 
 Antes de iniciar o desenvolvimento é necessário ter as seguintes ferramentas instaladas:
 
@@ -66,13 +66,13 @@ Com as ferramentas instaladas e o driver configurado, podemos criar a pasta para
 
 Note que adicionei também a biblioteca `alcaeus/mongo-php-adapter`, pois o Doctrine ODM não suporta a nova versão da extensão do PHP para MongoDB, sendo assim, com a instalação desse *adapter* o Doctrine deve funcionar normalmente.
 
-Agora posso instalar as dependências, talves seja necessário utilizar o parâmentro `--ignore-platform-reqs`, pois justamente por essa incompatibilidade o Composer pode barrar a instalação:
+Agora posso instalar as dependências, talvez seja necessário utilizar o parâmetro `--ignore-platform-reqs`, pois justamente por essa incompatibilidade o Composer pode barrar a instalação:
 
 ```txt
 $ composer install --ignore-platform-reqs
 ```
 
-Depois de instalado, criei mais algumas pastas e arquivos para que a estrutura fique conforme o lista a seguir, lembrando que o objetivo aqui será mostrar básicamente os arquivos que estão na pasta `Document` e na pasta `Repository`.
+Depois de instalado, criei mais algumas pastas e arquivos para que a estrutura fique conforme o lista a seguir, lembrando que o objetivo aqui será mostrar apenas os arquivos que estão na pasta `Document`, `Repository` e `Service`.
 
 ```txt
  |-public
@@ -104,7 +104,7 @@ Depois de instalado, criei mais algumas pastas e arquivos para que a estrutura f
  |-composer.lock
 ``` 
 
-Agora vou adicionar o script no arquivo `bootstrap.php` para criar a conexão com o banco de dados e configurar onde será salvo as classes de *Proxies* e *Hydrators* gerados pelo *Doctrine*, no meu caso deixarei a pasta `/tmp` e o nome do banco `doctrineblog`, caso não seja configurado o nome do banco utilizando o método `$config->setDefaultDB`, por padrão será criado com o nome `doctrine`.
+Agora vou adicionar o *script* no arquivo `bootstrap.php` para criar a conexão com o banco de dados e configurar onde será salvo as classes de *Proxies* e *Hydrators* gerados pelo *Doctrine*, no meu caso deixarei a pasta `/tmp` e o nome do banco `doctrineblog`, caso não seja configurado o nome do banco utilizando o método `$config->setDefaultDB`, por padrão será criado com o nome `doctrine`.
 
 ```php
 <?php
@@ -148,9 +148,9 @@ $server = "mongodb://user:pass@server:port/dbname";
 $dm = DocumentManager::create(new Connection($server), $config);
 ```
 
-Depois de ter criado a conexão, vou criar os arquivos responsáveis por mapear os objetos da minha aplicação com as coleções do banco de dados, assim como no Doctrine ORM é possível fazer isso de forma simples utilizando as anotações, XML ou YAML, nesse exemplo estarei utilizando anotações. Para que as anotações funcionem é necesário que importe a classe `Annotations` (no caso abaixo foi dado um apelido `ODM`) e depois informe ao Doctrine que a classe que está sendo criada é um documento do MongoDB com a anotação `@ODM\Document`, posso informar também qual o nome da coleção que deverá ser armazenado esse documento passando como parâmetro o nome da coleção `@ODM\Document(collection="posts")`, caso não informe o nome da coleção, ele será criado com o mesmo nome da classe, em seguida posso criar os campos do documento utilizando as anotações, basicamente informando o tipo do campo.
+Depois de ter criado a conexão, vou criar os arquivos responsáveis por mapear os objetos da minha aplicação com as coleções do banco de dados, assim como no Doctrine ORM é possível fazer isso de forma simples utilizando as anotações, XML ou YAML, nesse exemplo estarei utilizando anotações. Para que as anotações funcionem é necessário que importe a classe `Annotations` (no caso abaixo foi dado um apelido `ODM`) e depois informe ao Doctrine que a classe que está sendo criada é um documento do MongoDB com a anotação `@ODM\Document`, posso informar também qual o nome da coleção que deverá ser armazenado esse documento passando como parâmetro o nome da coleção `@ODM\Document(collection="posts")`, caso não informe o nome da coleção, ele será criado com o mesmo nome da classe, em seguida posso criar os campos do documento utilizando as anotações, simplesmente informando o tipo do campo.
 
-Importante destacar o atributo `$comments` onde está dizendo que deverá referênciar vários documentos (`ReferenceMany`) utilizando a estratégia (`strategy`) `set` que é um comando do MongoDB, o documento alvo (`targetDocument`) que será refenciado dentro dessa lista é o `Comment` (uma classe que deverá ser criada), qualquer operação executada no documento pai (`Post`) poderá refletir nos documentos filhos (`Comment`) utilizando o parâmetro `cascade="all"` ([esse opção pode ser personalizada](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/reference/reference-mapping.html#cascading-operations)) e por fim, confirme descrito no início do post os comentários retornados deverão estar em ordem decrescente pela data de criação, para isso usamos o parâmetro `sort={"createdAt": "desc"}`.
+Importante destacar o atributo `$comments` onde está dizendo que deverá referenciar vários documentos (`ReferenceMany`) utilizando a estratégia (`strategy`) `set` que é um comando do MongoDB, o documento alvo (`targetDocument`) que será referenciado dentro dessa lista é o `Comment` (uma classe que deverá ser criada), qualquer operação executada no documento pai (`Post`) poderá refletir nos documentos filhos (`Comment`) utilizando o parâmetro `cascade="all"` ([esse opção pode ser personalizada](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/reference/reference-mapping.html#cascading-operations)) e por fim, confirme descrito no início do *post* os comentários retornados deverão estar em ordem decrescente pela data de criação, para isso usamos o parâmetro `sort={"createdAt": "desc"}`.
 
 Sendo assim, a classe `Post` deve ficar da seguinte forma:
 
@@ -410,7 +410,7 @@ class Comment
 }
 ```
 
-Agora que temos nossas classes mapeadas com o banco de dados já é possível utiliza-las, para isso poderiamos fazer da seguinte forma para armazenar e retornar os posts do banco de dados, utilizando o `$dm` que é o *DocumentManager* criado no arquivo `bootstrap.php`:
+Agora que temos nossas classes mapeadas com o banco de dados já é possível utilizá-las, para isso poderíamos fazer da seguinte forma para armazenar e retornar os *posts* do banco de dados, utilizando o `$dm` que é o *DocumentManager* criado no arquivo `bootstrap.php`:
 
 ```php
 <?php
@@ -428,7 +428,7 @@ $dm->flush();
 $posts = $this->dm->getRepository(Post::class)->findAll();
 ```
 
-Mas para que fique algo mais organizado, criei uma classe chamada `PostRepostory` que recebe o *DocumentManager* no construtor. Para realizar as consultas vou utilizar a [Query Builder API](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/reference/query-builder-api.html#query-builder-api) que possíbilita criar consultas mais personalizadas, pois será necessário retornar o posts em ordem decrescente por data de criação.
+Mas para que fique algo mais organizado, criei uma classe chamada `PostRepostory` que recebe o *DocumentManager* no construtor. Para realizar as consultas vou utilizar a [Query Builder API](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/reference/query-builder-api.html#query-builder-api) que possibilita criar consultas mais personalizadas, pois será necessário retornar o *posts* em ordem decrescente por data de criação.
 
 Então, a classe `PostRepository` deve ficar da seguinte forma: 
 
@@ -724,4 +724,4 @@ Podemos ver a facilidade que o Doctrine nos oferece para trabalhar com MongoDB, 
 
 Eu particularmente já desenvolvi projetos que usam PHP com MongoDB, mas ainda não utilizei o Doctrine ODM, pelo motivo de que quando fui pesquisar ainda estava na versão BETA e não quis arriscar, mas se atualmente eu fosse começar um novo projeto, com certeza daria uma atenção maior a esse *framework*.
 
-A fonte principal desse post foi a documentação oficial do Doctrine ODM, caso queira saber mais recomendo que acesse, pois está bem completa:  [http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/).
+A fonte principal desse *post* foi a documentação oficial do Doctrine ODM, caso queira saber mais recomendo que acesse, pois está bem completa:  [http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/](http://docs.doctrine-project.org/projects/doctrine-mongodb-odm/en/latest/).
