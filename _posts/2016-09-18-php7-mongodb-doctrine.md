@@ -13,12 +13,12 @@ persistência Doctrine ODM. Como exemplo, vou desenvolver um blog simples com po
 Sendo assim, o blog deverá ter os seguintes recursos na API:
 
 ```txt
-    - [POST] /api/post               // Inserir post
-    - [GET]  /api/post               // Listar dodos os posts
-    - [GET]  /api/post/{id}          // Retornar um post
-    - [POST] /api/post/{id}/comment  // Inserir comentário no post
+- [POST] /api/post               // Inserir post
+- [GET]  /api/post               // Listar dodos os posts
+- [GET]  /api/post/{id}          // Retornar um post
+- [POST] /api/post/{id}/comment  // Inserir comentário no post
 
-    - Obs: todos os posts e comentários deverão ser retornados em ordem decrescente por data de criação.
+- Obs: todos os posts e comentários deverão ser retornados em ordem decrescente por data de criação.
 ```
 
 Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Object Document Mapper) é um framework que foi desenvolvido para o PHP 5.3.0+ e provê uma forma mais transparente de persistir objetos do PHP no MongoDB. Quem já utilizou o Doctrine ORM (Object Relational Mapper), pode ter uma facilidade maior para entender a versão para trabalhar com MongoDB, porém é importante também se que tenha conhecimento especificamente sobre o banco de dados para que possa utilizar da melhor forma tanto o framework quanto as vantagens que o MongoDB oferece. Caso não conheça e tenha interesse em aprender sobre MongoDB, existem varios cursos na internet que possa ajudar, porém dois dos que eu fiz, que são gratuitos e que me ajudaram muito, foi o da [Webschool](http://webschool.io/) e o da [MongoDB University](https://university.mongodb.com/).
