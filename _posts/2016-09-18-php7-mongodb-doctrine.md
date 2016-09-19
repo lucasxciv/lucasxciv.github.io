@@ -25,7 +25,7 @@ Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Objec
 
 Antes de iniciar o desenvolvimento é necessário ter as seguintes ferramentas instaladas:
 
-- PHP - Minha versão: 7.0.2
+- PHP - Minha versão: 7.1.0
 - Composer - Minha versão: 1.1.2
 - MongoDB - Minha versão: 3.0.7 / testei também na versão 3.2.9
 
