@@ -439,6 +439,7 @@ namespace DOLucas\Blog\Repository;
 
 use DOLucas\Blog\Document\Post;
 use Doctrine\ODM\MongoDB\DocumentManager;
+use Doctrine\ODM\MongoDB\Cursor;
 
 /**
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
@@ -468,16 +469,16 @@ class PostRepository
     /**
      * @param Post $post
      */
-    public function save(Post $post)
+    public function save(Post $post) : void
     {
         $this->dm->persist($post);
         $this->dm->flush();
     }
 
     /**
-     * @return array
+     * @return Cursor
      */
-    public function getAll()
+    public function getAll() : Cursor
     {
         return $this
             ->queryBuilder
@@ -488,9 +489,9 @@ class PostRepository
 
     /**
      * @param string $id
-     * @return array
+     * @return Post
      */
-    public function getById(string $id)
+    public function getById(string $id) : Post
     {
         return $this
             ->queryBuilder
@@ -572,7 +573,7 @@ class PostService
     /**
      * @param array $params
      */
-    public function create(array $params)
+    public function create(array $params) : array
     {
         try {
             $this->postValidator->validate($params);
@@ -606,7 +607,7 @@ class PostService
     /**
      * @return array
      */
-    public function getAll()
+    public function getAll() : array
     {
         return $this->toArray($this->repository->getAll());
     }
@@ -615,7 +616,7 @@ class PostService
      * @param string $idPost
      * @return array
      */
-    public function getById(string $idPost)
+    public function getById(string $idPost) : array
     {
         return $this->toArray($this->repository->getById($idPost));
     }
@@ -625,7 +626,7 @@ class PostService
      * @param array $params
      * @return array
      */
-    public function addComment(string $idPost, array $params)
+    public function addComment(string $idPost, array $params) : array
     {
         try {
             $this->commentValidator->validate($params);
