@@ -21,7 +21,7 @@ Sendo assim, o blog deverá ter os seguintes recursos na API:
 - Obs: todos os posts e comentários deverão ser retornados em ordem decrescente por data de criação.
 ```
 
-Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Object Document Mapper) é um framework que foi desenvolvido para o PHP 5.3.0+ e provê uma forma mais transparente de persistir objetos do PHP no MongoDB. Quem já utilizou o Doctrine ORM (Object Relational Mapper), pode ter uma facilidade maior para entender a versão para trabalhar com MongoDB, porém é importante também se que tenha conhecimento especificamente sobre o banco de dados para que possa utilizar da melhor forma tanto o *framework* quanto as vantagens que o MongoDB oferece. Caso não conheça e tenha interesse em aprender sobre MongoDB, atualmente existem vários cursos na internet que pode ajudar, porém dois dos que eu fiz, que são gratuitos e que me ajudaram muito, foi o da [Webschool](http://webschool.io/) e o da [MongoDB University](https://university.mongodb.com/).
+Primeiro, vamos entender um pouco o que é o Doctrine ODM. O Doctrine ODM (Object Document Mapper) é um framework que foi desenvolvido para o PHP 5.3.0+ e provê uma forma mais transparente de persistir objetos do PHP no MongoDB. Quem já utilizou o Doctrine ORM (Object Relational Mapper), pode ter uma facilidade maior para entender a versão para trabalhar com MongoDB, porém é importante também ter conhecimento especificamente sobre o banco de dados para que possa utilizar da melhor forma tanto o *framework* quanto as vantagens que o MongoDB oferece. Caso não conheça e tenha interesse em aprender sobre MongoDB, atualmente existem vários cursos na internet que podem ajudar, porém dois dos que eu fiz, que são gratuitos e que me ajudaram muito, foi o da [Webschool](http://webschool.io/) e o da [MongoDB University](https://university.mongodb.com/).
 
 Antes de iniciar o desenvolvimento é necessário ter as seguintes ferramentas instaladas:
 
@@ -64,7 +64,7 @@ Com as ferramentas instaladas e o driver configurado, podemos criar a pasta para
 }
 ```
 
-Note que adicionei também a biblioteca `alcaeus/mongo-php-adapter`, pois o Doctrine ODM não suporta a nova versão da extensão do MongoDB para PHP, sendo assim, com a instalação desse *adapter* o Doctrine deve funcionar normalmente.
+Note que adicionei também a biblioteca `alcaeus/mongo-php-adapter`, pelo fato da versão atual do Doctrine ODM (1.3) não suportar a nova versão da extensão do MongoDB para PHP é necessário a instalação desse *adapter* para que o *framework* funcione normalmente.
 
 Agora posso instalar as dependências, talvez seja necessário utilizar o parâmetro `--ignore-platform-reqs`, pois justamente por essa incompatibilidade o Composer pode barrar a instalação:
 
