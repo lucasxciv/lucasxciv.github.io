@@ -502,7 +502,7 @@ class PostRepository
 }
 ```
 
-Com a classe *repository* e os *documents* prontos, vou criar mais uma classe chamada `PostService` que será responsável por inserir as informações que vem da requisição no banco de dados utilizando as classes criadas anteriormente e utilizar o método `toArray` para mostrar os dados de forma mais limpa na API. Adicionei também as classes *Factories* que é responsável por instanciar os *documents* e os *Validators* para validar os dados que vem da requisição. Então a classe `PostService` com todos os métodos que precisamos, ficou da seguinte maneira:
+Com a classe *repository* e os *documents* prontos, vou criar mais uma classe chamada `PostService` que será responsável por inserir as informações que vem da requisição no banco de dados utilizando as classes criadas anteriormente e utilizar o método `toArray` para mostrar os dados de forma mais limpa na API. Adicionei também as classes *Factories* que é responsável por instanciar os *documents* e os *Validators*. Então a classe `PostService` com todos os métodos que precisamos, ficou da seguinte maneira:
 
 ```php
 <?php
