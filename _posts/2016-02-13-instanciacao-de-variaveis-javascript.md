@@ -9,7 +9,7 @@ Esse *post* foi postado originalmente como um artigo na [Webschool](https://gith
 
 ## Resumo
 
-Neste artigo veremos algumas funcionalidades fundamentais utilizadas em Javascript, essa que é uma linguagem que cada vez mais cresce no desenvolvimento web. Teremos uma introdução sobre Hoisting, Clousure, Variável Global, Variável por parâmetro e Instanciação usando uma IIFE, veremos também alguns exemplos de utilização.
+Neste artigo veremos algumas funcionalidades fundamentais utilizadas em Javascript; essa que é uma linguagem que cada vez mais cresce na área de desenvolvimento de sistemas. Teremos uma introdução sobre Hoisting, Clousure, Variável Global, Variável por parâmetro e Instanciação usando uma IIFE, veremos também alguns exemplos de utilização.
 
 ## Hoisting
 
