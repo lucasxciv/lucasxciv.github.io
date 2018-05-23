@@ -1,10 +1,13 @@
----
-layout: post
-title:  "Utilizando PHP 7, MongoDB e Doctrine"
-date:   2016-09-18 16:00:00
-categories: php7 mongodb doctrine utilizando
-comments: true
----
+```json
+{
+  "layout": "post",
+  "title": "Utilizando PHP 7, MongoDB e Doctrine",
+  "date": "2016-09-18 16:00:00",
+  "categories": ["php7", "mongodb", "doctrine", "odm", "utilizando"],
+  "comments": true
+}
+```
+----------
 Faz um tempo que estou utilizando PHP com MongoDB e faz um tempo também que vi que tinha uma versão do Doctrine que poderia me ajudar com isso, porém quando tinha visto (ano passado) e fui fazer uns testes tive alguns problemas por ainda estar na versão BETA, esses dias resolvi olhar novamente e vi já faz alguns meses que a versão 1.0 foi lançada e que está até na versão 1.1, então decidi fazer uns testes novamente e compartilhar aqui no blog.
 
 Nesse post vou dar uma introdução de como trabalhar com PHP e MongoDB utilizando o framework de 
