@@ -1,9 +1,9 @@
 ```json
 {
-  "layout": "post"
-  "title": "Iniciando com PHP 7"
-  "date": "2016-01-26 21:43:00"
-  "categories": ["php7", "características"]
+  "layout": "post",
+  "title": "Iniciando com PHP 7",
+  "date": "2016-01-26 21:43:00",
+  "categories": ["php7", "características"],
   "comments": true
 }
 ```
