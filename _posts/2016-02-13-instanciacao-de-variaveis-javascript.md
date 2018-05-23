@@ -1,10 +1,13 @@
----
-layout: post
-title:  "Instanciação de variáveis no Javascript"
-date:   2016-02-13 10:30:00
-categories: instanciação variaveis javascript
-comments: true
----
+```json
+{
+  "layout": "post",
+  "title": "Instanciação de variáveis no Javascript",
+  "date": "2016-02-13 10:30:00",
+  "categories": ["instanciação", "variaveis", "javascript"],
+  "comments": true
+}
+```
+----------
 Esse *post* foi postado originalmente como um artigo na [Webschool](https://github.com/Webschool-io).
 
 ## Resumo
