@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block description %}{{ post.getContent()|slice(1, 300) }}...{% endblock %}
+{% block title %}{{ post.getTitle() }} - Lucas de Oliveira{% endblock %}
+
+{% block content %}
+<main role="main" class="container text-justify">
+    <h1 class="mt-5 title">deoliveiralucas.net</h1>
+    <p>
+        <a href="/">Home</a>
+    </p>
+
+    <h2 class="mt-5 font-weight-bold text-left">{{ post.getTitle() }}</h2>
+    <small class="text-muted">{{ post.getPostedAt().format('Y M d, H\\h') }}</small> -
+    <small class="text-muted">
+        tags: {% for key, category in post.getCategories() %}{{ key > 0 ? ', ' }}<u>{{ category }}</u>{% endfor %}
+    </small>
+    <hr />
+
+    <p>{{ post.getContent()|raw }}</p>
+
+    <div class="mt-5">
+        <div id="disqus_thread"></div>
+
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;
+                this.page.identifier = "{{ post.getSlug }}";
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://deoliveiralucas.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</main>
+{% endblock %}
