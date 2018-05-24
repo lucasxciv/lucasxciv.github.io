@@ -22,5 +22,8 @@
     },
     "require-dev": {
         "deployer/deployer": "^6.2"
+    },
+    "scripts": {
+        "app-clear-cache": "rm -rf data/cache/*"
     }
 }

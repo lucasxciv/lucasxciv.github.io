@@ -28,8 +28,10 @@ host(getenv('SSH_DEPLOY_HOST'))
     ->user(getenv('SSH_DEPLOY_USER'))
     ->port(getenv('SSH_DEPLOY_PORT'))
     ->set('deploy_path', getenv('SSH_DEPLOY_PATH'));
-    
+
 // Tasks
+task('composer:cache-clear', '/opt/php71/bin/php ~/composer.phar app-clear-cache');
+
 desc('Deploy deoliveiralucas.net');
 task('deploy', [
     'deploy:info',
@@ -43,6 +45,7 @@ task('deploy', [
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
+    'composer:cache-clear',
     'cleanup',
     'success'
 ]);
