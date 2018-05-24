@@ -19,5 +19,8 @@
         "psr-4": {
             "": "src/"
         }
+    },
+    "require-dev": {
+        "deployer/deployer": "^6.2"
     }
 }
