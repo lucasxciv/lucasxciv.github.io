@@ -24,6 +24,7 @@
         "deployer/deployer": "^6.2"
     },
     "scripts": {
-        "app-clear-cache": "rm -rf data/cache/*"
+        "app-clear-cache": "rm -rf data/cache/*",
+        "deploy": "dep deploy"
     }
 }
