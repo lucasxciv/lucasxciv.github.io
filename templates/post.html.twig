@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-{% block description %}{{ post.getContent()|slice(3, 900) }}{% endblock %}
+{% block description %}{{ post.getContent()|slice(3, 900)|striptags }}{% endblock %}
 {% block title %}{{ post.getTitle() }} - Lucas de Oliveira{% endblock %}
 
 {% block content %}
