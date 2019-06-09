@@ -14,9 +14,9 @@ In this post I will describe a short review of Value Object/Type and then show h
 
 ## Short review about Value Object/Type
 
-In some books you can see the author calling this pattern of Value Object and in others of Value Type, in this post since now I will call it just of Value Object. 
+In some books you can see the author calling this pattern of Value Object and in others of Value Type, in this post from now on I will call it just of Value Object.
 
-Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` value in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, then if we need to change some of these rules we just go in one place, also all the object that need a money type will have it already validated, these things can reduce the risk of confusion and duplication.
+Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` Value Object in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, then if we need to change some of these rules we just go in one place, also all the object that need a money type will have it already validated, these things can reduce the risk of confusion and duplication.
 
 We can find more about this concept of Value Object in many books or articles, like any books of DDD of Eric Evans or Vaughn Vernon, Refactoring of Martin Fowler, Growing Objects-Oriented Software of Steve Freeman and Nat Pryce, and a many others books or articles that have as the goal improve the software design and consistency.
 
@@ -26,7 +26,7 @@ So, before I start showing the code, let's assume that our Value Object definiti
 
 ## Persisting Value Object with Doctrine ODM
 
-To persist Value Object using Doctrine ODM we can simply use the [Custom Mapping Types](https://www.doctrine-project.org/projects/doctrine-mongodb-odm/en/1.2/reference/basic-mapping.html#custom-mapping-types) or [@EmbedOne Annotation](https://www.doctrine-project.org/projects/doctrine-mongodb-odm/en/1.2/reference/annotations-reference.html#embedone) that the framework provides. Beyond Doctrine ODM I will also install others two packages, one to create Uuid, that is [ramsey/uuid](https://github.com/ramsey/uuid) and other one to help validate the input data, that is [beberlei/assert](https://github.com/beberlei/assert). 
+To persist Value Object using Doctrine ODM I can simply use the [Custom Mapping Types](https://www.doctrine-project.org/projects/doctrine-mongodb-odm/en/1.2/reference/basic-mapping.html#custom-mapping-types) or [@EmbedOne Annotation](https://www.doctrine-project.org/projects/doctrine-mongodb-odm/en/1.2/reference/annotations-reference.html#embedone) that the framework provides. Beyond Doctrine ODM I will also install others two packages, one to create Uuid, that is [ramsey/uuid](https://github.com/ramsey/uuid) and other one to help validate the input data, that is [beberlei/assert](https://github.com/beberlei/assert). 
 
 For example, if I have a product entity with three properties that are these Value Objects: `IdProduct`, `Name` and `Price`, I can create a custom type for `IdProduct` and `Name` that are Value Objects that have only one attribute and the only thing I need to do before persist is convert the object to a MongoDB type, and for `Money` Value Object I can use the `@EmbedOne` annotation because it has two attributes, `value` and `currency`, so I can do something like this: 
 
@@ -205,7 +205,7 @@ class Money
 
     public static function USD(float $value) : self
     {
-        Assertion::min($value, 3, 'Money must be positive value');
+        Assertion::min($value, 0, 'Money must be positive value');
 
         return new self($value, static::USD);
     }
