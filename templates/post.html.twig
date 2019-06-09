@@ -1,7 +1,16 @@
 {% extends 'layout.html.twig' %}
 
-{% block description %}{{ post.getContent()|slice(3, 900)|striptags }}{% endblock %}
+{% set shortDescription = post.getContent()|slice(3, 900)|striptags %}
+{% block description %}{{ shortDescription }}{% endblock %}
 {% block title %}{{ post.getTitle() }} - Lucas de Oliveira{% endblock %}
+
+{% block seo %}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@oliveiralucasbr" />
+<meta property="og:url" content="http://whoami.deoliveiralucas.net/blog/{{ post.getSlug() }}" />
+<meta property="og:title" content="{{ post.getTitle() }}r" />
+<meta property="og:description" content="{{ shortDescription }}" />
+{% endblock %}
 
 {% block content %}
 <main role="main" class="container text-justify">
