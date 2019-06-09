@@ -8,7 +8,7 @@
 }
 ```
 ----------
-I have worked since the latest couple years with Doctrine ODM in production environment and in some situations I needed to improve my code applying the concept of Value Object/Type, that is a very important pattern to avoid creation of invalid object and improve the design of the domain code.
+I have worked since the latest couple years with Doctrine ODM in production environment and in some situations I needed to improve my code applying the concept of Value Object/Type, that is a very important pattern to avoid creation of invalid object and to improve the design of the domain code.
 
 In this post I will describe a short review of Value Object/Type and then show how to apply this concept and persist on the database using Doctrine ODM.
 
