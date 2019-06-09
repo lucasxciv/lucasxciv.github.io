@@ -1,26 +1,28 @@
 ```json
 {
   "layout": "post",
-  "title": "How to persist Value Object/Type with Doctrine ODM",
+  "title": "How to persist Value Object with Doctrine ODM",
   "date": "2019-06-09 10:00:00",
   "categories": ["value object", "value type", "doctrine odm"],
   "comments": true
 }
 ```
 ----------
-Since the latest couple years I've been working with Doctrine ODM in production environment and in some situations I needed to improve my code applying the concept of Value Object/Type, that is a very important pattern to avoid the creation of invalid object and improve the design of the domain code.
+I have worked since the latest couple years with Doctrine ODM in production environment and in some situations I needed to improve my code applying the concept of Value Object/Type, that is a very important pattern to avoid creation of invalid object and improve the design of the domain code.
 
-In this post I will describe a short review of Value Object/Type and than show how to apply this concept and persist on the database using Doctrine ODM.
+In this post I will describe a short review of Value Object/Type and then show how to apply this concept and persist on the database using Doctrine ODM.
 
 ## Short review about Value Object/Type
 
-In some books you can find the author calling this pattern Value Object and in others Value Type, in this post since now I'll call it just Value Object. Value Objects are small objects that represents a value, so two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, for example, if we create a `Money` value in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, than if we need to change some of these rules we just go in one place, also all the object that need a money type will have this already validated, these things can reduce the risk of confusion and duplication.
+In some books you can see the author calling this pattern of Value Object and in others of Value Type, in this post since now I will call it just of Value Object. 
 
-We can find more about these concept of Value Object in many different books or articles, like any books of DDD of Eric Evans or Van Vernoun, Refactoring of Martin Folwer, Growing Objects-Oriented Software of Steve Freedman and Nat Price, and a many other books or articles that have as the goal improve the software design and consistency.
+Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` value in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, than if we need to change some of these rules we just go in one place, also all the object that need a money type will have this already validated, these things can reduce the risk of confusion and duplication.
+
+We can find more about these concept of Value Object in many books or articles, like any books of DDD of Eric Evans or Vaughn Vernon, Refactoring of Martin Fowler, Growing Objects-Oriented Software of Steve Freeman and Nat Pryce, and a many others books or articles that have as the goal improve the software design and consistency.
 
 So before I start showing the code, let's assume that our Value Object definition is, like described in [Martin Fowler article](https://martinfowler.com/bliki/ValueObject.html):
 
-> "Objects that are equal due to the value of their properties..."
+> *"Objects that are equal due to the value of their properties..."*
 
 ## Persisting Value Object with Doctrine ODM
 
@@ -214,7 +216,7 @@ And then the Doctrine ODM Custom Types.
 
 - Custom Type `IdProductType`:
 
-```
+```php
 <?php
 
 namespace Store\Type;
@@ -245,7 +247,7 @@ class IdProductType extends Type
 
 - Custom Type `NameType`:
 
-```
+```php
 <?php
 
 namespace Store\Type;
@@ -274,9 +276,9 @@ class NameType extends Type
 
 ```
 
-After I created the custom types I have to register it on Doctrine ODM. I can only use the type `product.id` and `product.name` on the `@Field` annotation because it is registered on Doctrine:
+After I created the custom types I have to register it on Doctrine ODM. I can only use the type `product.id` and `product.name` on the `@Field` annotation because it was registered on Doctrine:
 
-```
+```php
 <?php
 
 use Doctrine\ODM\MongoDB\Types\Type;
@@ -285,9 +287,9 @@ Type::addType('product.id', Store\Type\IdProductType::class);
 Type::addType('product.name', Store\Type\NameType::class);
 ```
 
-Finally, when I persist the `Product` entity I'll have this result on MongoDB:  
+Finally, when I persist the `Product` entity I will have this result on MongoDB:  
 
-```
+```js
 > db.Product.find().pretty()
 {
         "_id" : "fb67f250-d36e-43bd-a0de-4f54f32d67f0",
@@ -299,4 +301,4 @@ Finally, when I persist the `Product` entity I'll have this result on MongoDB:
 }
 ```
 
-I hope this post could help you understand how to persist Value Objects using Doctrine ODM, [check my Github repository](https://github.com/deoliveiralucas/persist-value-object-doctrine-odm) if you want to see and execute all the source code.
+I hope this post could have help you understand how to persist Value Objects using Doctrine ODM, [check out my Github repository](https://github.com/deoliveiralucas/persist-value-object-doctrine-odm) if you want to see and execute all the source code.
