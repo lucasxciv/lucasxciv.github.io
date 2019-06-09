@@ -292,12 +292,12 @@ Finally, when I persist the `Product` entity I will have this result on MongoDB:
 ```js
 > db.Product.find().pretty()
 {
-        "_id" : "fb67f250-d36e-43bd-a0de-4f54f32d67f0",
-        "name" : "Notebook",
-        "price" : {
-                "value" : 1000,
-                "currency" : "USD"
-        }
+    "_id" : "fb67f250-d36e-43bd-a0de-4f54f32d67f0",
+    "name" : "Notebook",
+    "price" : {
+        "value" : 1000,
+        "currency" : "USD"
+    }
 }
 ```
 
