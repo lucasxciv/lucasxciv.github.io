@@ -16,7 +16,7 @@ In this post I will describe a short review of Value Object/Type and then show h
 
 In some books you can see the author calling this pattern of Value Object and in others of Value Type, in this post from now on I will call it just of Value Object.
 
-Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` Value Object in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, then if we need to change some of these rules we just go in one place, also all the object that need a money type will have it already validated, these things can reduce the risk of confusion and duplication.
+Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` Value Object in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, then if we need to change some of these rules we just go in one place, also all the objects that need a money type will have it already validated, these things can reduce the risk of confusion and duplication.
 
 We can find more about this concept of Value Object in many books or articles, like any books of DDD of Eric Evans or Vaughn Vernon, Refactoring of Martin Fowler, Growing Objects-Oriented Software of Steve Freeman and Nat Pryce, and a many others books or articles that have as the goal improve the software design and consistency.
 
@@ -221,6 +221,7 @@ And then the Doctrine ODM Custom Types.
 
 namespace Store\Type;
 
+use Doctrine\ODM\MongoDB\Types\ClosureToPHP;
 use Doctrine\ODM\MongoDB\Types\Type;
 use Ramsey\Uuid\Uuid;
 use Store\IdProduct;
@@ -228,14 +229,11 @@ use Store\IdProduct;
 class IdProductType extends Type
 {
 
+    use ClosureToPHP;
+
     public function convertToPHPValue($value)
     {
         return Uuid::fromString((string)$value);
-    }
-
-    public function closureToPHP() : string
-    {
-        return '$return = Ramsey\Uuid\Uuid::fromString((string)$value);';
     }
 
     public function convertToDatabaseValue($value)
@@ -252,20 +250,18 @@ class IdProductType extends Type
 
 namespace Store\Type;
 
+use Doctrine\ODM\MongoDB\Types\ClosureToPHP;
 use Doctrine\ODM\MongoDB\Types\Type;
 use Store\Name;
 
 class NameType extends Type
 {
 
+    use ClosureToPHP;
+
     public function convertToPHPValue($value)
     {
         return Name::fromString((string)$value);
-    }
-
-    public function closureToPHP() : string
-    {
-        return '$return = Store\Name::fromString((string)$value);';
     }
 
     public function convertToDatabaseValue($value)
@@ -273,7 +269,6 @@ class NameType extends Type
         return $value->toString();
     }
 }
-
 ```
 
 After I created the custom types I have to register it on Doctrine ODM. I can only use the type `product.id` and `product.name` on the `@Field` annotation because it was registered on Doctrine:
