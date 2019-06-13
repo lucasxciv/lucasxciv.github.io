@@ -20,7 +20,7 @@ Value Objects are small objects that represents a value, two Value Objects with 
 
 We can find more about this concept of Value Object in many books or articles, like any books of DDD by Eric Evans by Vaughn Vernon, Refactoring by Martin Fowler, Growing Objects-Oriented Software by Steve Freeman and Nat Pryce, and a many other books or articles that have as the goal improve the software design and consistency.
 
-So, before I start showing the code, let's assume that our Value Object definition is, like described in [Martin Fowler's article](https://martinfowler.com/bliki/ValueObject.html):
+So, before I start showing the code, let's assume that our Value Object definition is, as described in [Martin Fowler's article](https://martinfowler.com/bliki/ValueObject.html):
 
 > *"Objects that are equal due to the value of their properties..."*
 
