@@ -13,9 +13,9 @@
 {% endblock %}
 
 {% block content %}
-<main role="main" class="container text-justify">
+<main role="main" class="container">
     <h1 class="mt-5 title">deoliveiralucas.net</h1>
-    <p>
+    <p class="custom-nav">
         <a href="/">Home</a>
     </p>
 
@@ -26,7 +26,7 @@
     </small>
     <hr />
 
-    <p>{{ post.getContent()|raw }}</p>
+    <div class="post-content">{{ post.getContent()|raw }}</div>
 
     <div class="mt-5">
         <div id="disqus_thread"></div>

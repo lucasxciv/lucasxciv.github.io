@@ -4,9 +4,9 @@
 {% block title %}Lucas de Oliveira - Web Developer{% endblock %}
 
 {% block content %}
-<main role="main" class="container text-justify">
+<main role="main" class="container">
     <h1 class="mt-5 title">deoliveiralucas.net</h1>
-    <p>
+    <p class="custom-nav">
         <a target="_blank" href="https://github.com/deoliveiralucas">Github</a> |
         <a target="_blank" href="https://twitter.com/oliveiralucasbr">Twitter</a> |
         <a target="_blank" href="https://www.linkedin.com/in/deoliveira-lucas">Linkedin</a> |
@@ -28,7 +28,7 @@
     <ul class="list-group">
         {% for key, post in posts %}
             <li {{ key == 0 ? 'class="mt-1"' : 'class="mt-2"' }}>
-                <a href="/blog/{{ post.getSlug() }}">{{ post.getTitle() }}</a>
+                <a href="/blog/{{ post.getSlug() }}">{{ post.getTitle() }}</a><br />
                 <span class="text-muted small"> {{ post.getPostedAt().format('Y M d, H\\h') }}</span>
             </li>
         {% endfor %}
@@ -38,23 +38,23 @@
 
     <ul class="list-group">
         <li class="mt-1">
-            <a target="_blank" href="https://speakerdeck.com/deoliveiralucas/dicas-para-iniciar-um-projeto-em-php">Dicas para iniciar um projeto em PHP - PHPVale</a>
+            <a target="_blank" href="https://speakerdeck.com/deoliveiralucas/dicas-para-iniciar-um-projeto-em-php">Dicas para iniciar um projeto em PHP - PHPVale</a><br />
             <span class="text-muted small">2019 Mar 16, 08h</span>
         </li>
         <li class="mt-1">
-            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/php2018-phpvale">PHP em 2018 - PHPVale</a>
+            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/php2018-phpvale">PHP em 2018 - PHPVale</a><br />
             <span class="text-muted small">2018 May 05, 17h</span>
         </li>
         <li class="mt-2">
-            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/introduo-a-orientao-a-objetos-com-php">Introdução a Orientação a Objetos com PHP - FLISoL Lorena</a>
+            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/introduo-a-orientao-a-objetos-com-php">Introdução a Orientação a Objetos com PHP - FLISoL Lorena</a><br />
             <span class="text-muted small">2017 Apr 08, 16h</span>
         </li>
         <li class="mt-2">
-            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/mongodb-flison-2016">Oficina de MongoDB - FLISoL Lorena</a>
+            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/mongodb-flison-2016">Oficina de MongoDB - FLISoL Lorena</a><br />
             <span class="text-muted small">2016 Apr 16, 18h</span>
         </li>
         <li class="mt-2">
-            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/php-com-mongodb">Minicurso PHP com MongoDB - XI Semana da Computação UNISAL</a>
+            <a target="_blank" href="https://pt.slideshare.net/deoliveiralucasnet/php-com-mongodb">Minicurso PHP com MongoDB - XI Semana da Computação UNISAL</a><br />
             <span class="text-muted small">2015 Oct 30, 22h</span>
         </li>
     </ul>

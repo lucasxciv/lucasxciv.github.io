@@ -1,7 +1,7 @@
 ```json
 {
   "layout": "post",
-  "title": "Instanciação de variáveis no Javascript",
+  "title": "Instanciação de Variáveis no JavaScript",
   "date": "2016-02-13 10:30:00",
   "categories": ["instanciação", "variaveis", "javascript"],
   "comments": true

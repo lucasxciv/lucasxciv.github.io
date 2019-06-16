@@ -1,7 +1,7 @@
 ```json
 {
   "layout": "post",
-  "title": "Trabalhando com datas no PHP",
+  "title": "Trabalhando com Datas no PHP",
   "date": "2016-02-11 22:50:00",
   "categories": ["php", "trabalhando", "datas"],
   "comments": true
