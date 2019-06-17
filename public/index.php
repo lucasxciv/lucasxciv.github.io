@@ -34,7 +34,10 @@ $app->get('/blog/{slug}', function (Request $request, Response $response, array 
         throw new NotFoundException($request, $response);
     }
 
-    return $this->view->render($response, 'post.html.twig', [ 'post' => $post ]);
+    return $this->view->render($response, 'post.html.twig', [
+        'post' => $post,
+        'sitePostUrl' => getenv('SITE_POST_URL'),
+    ]);
 });
 
 $app->run();
