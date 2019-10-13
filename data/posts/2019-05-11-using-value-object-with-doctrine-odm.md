@@ -18,7 +18,7 @@ In some books you can see the author calling this pattern of Value Object and in
 
 Value Objects are small objects that represents a value, two Value Objects with the same state are equals, the main characteristics of a Value Object are that it is immutable and does not have an identity. We can use Value Object to help create a consistent domain model that could be easier to understand, such as, if we create a `Money` Value Object in our code instead of just using `float`, we can let all the rules that is relevant to create a money value inside the same object, then if we need to change some of these rules we just go in one place, also all the objects that need a money type will have it already validated, these things can reduce the risk of confusion and duplication.
 
-We can find more about this concept of Value Object in many books or articles, like any books of DDD by Eric Evans by Vaughn Vernon, Refactoring by Martin Fowler, Growing Objects-Oriented Software by Steve Freeman and Nat Pryce, and a many other books or articles that have as the goal improve the software design and consistency.
+We can find more about this concept of Value Object in many books or articles, like any books of DDD by Eric Evans or Vaughn Vernon, Refactoring by Martin Fowler, Growing Objects-Oriented Software by Steve Freeman and Nat Pryce, and a many other books and articles that have as the goal improve the software design and consistency.
 
 So, before I start showing the code, let's assume that our Value Object definition is, as described in [Martin Fowler's article](https://martinfowler.com/bliki/ValueObject.html):
 
