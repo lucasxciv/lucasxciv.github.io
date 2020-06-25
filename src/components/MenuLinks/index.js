@@ -41,6 +41,7 @@ const MenuLinks = () => {
                 duration={0.6}
                 href={link.url}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.label}
               </S.MenuLinksAnchor>

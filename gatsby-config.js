@@ -79,10 +79,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [`Cantora One`, `Varela Round`, "Consolas"],
-        display: "swap",
+        google: {
+          families: [`Cantora One`, `Varela Round`, `Consolas`],
+        },
       },
     },
     `gatsby-plugin-sitemap`,
