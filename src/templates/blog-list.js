@@ -3,19 +3,14 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
-import Pagination from "../components/Pagination"
+import Presentations from "../components/Presentations"
 import About from "../components/About"
 
 import * as S from "../components/ListWrapper/styled"
+import Footer from "../components/Footer"
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
-
-  const { currentPage, numberPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numberPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/page/${currentPage - 1}`
-  const nextPage = `/page/${currentPage + 1}`
 
   return (
     <Layout>
@@ -46,14 +41,11 @@ const BlogList = props => {
           )
         )}
       </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        current={currentPage}
-        numberPages={numberPages}
-        prev={prevPage}
-        next={nextPage}
-      />
+      <S.Title>Presentations</S.Title>
+      <S.ListWrapper>
+        <Presentations />
+      </S.ListWrapper>
+      <Footer />
     </Layout>
   )
 }
