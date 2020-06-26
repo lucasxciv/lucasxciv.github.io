@@ -81,8 +81,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
-        google: {
+        custom: {
           families: [`Cantora One`, `Varela Round`, `Consolas`],
+          urls: ["/css/fonts.css"],
         },
       },
     },
