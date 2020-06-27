@@ -4,7 +4,7 @@ import media from "styled-media-query"
 export const Title = styled.div`
   color: var(--texts);
   width: 80%;
-  margin: 25px auto 0 auto;
+  margin: 30px auto 0 auto;
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;

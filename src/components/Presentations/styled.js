@@ -2,7 +2,22 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const Link = styled.a`
+  color: var(--texts);
+  display: flex;
   text-decoration: none;
+  cursor: default;
+
+  &:first-child {
+    margin-top: 25px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  body#grid & {
+    background-color: var(--background);
+  }
 `
 
 export const Item = styled.div`
@@ -13,7 +28,7 @@ export const Item = styled.div`
   box-shadow: 0.1px 0.1px 5px var(--borders);
   transition: box-shadow 5s linear;
   padding: 1rem 2rem;
-  margin: 10px auto;
+  margin: 5px auto;
   width: 80%;
 
   body#grid & {
