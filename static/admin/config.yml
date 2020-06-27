@@ -3,6 +3,8 @@ backend:
   repo: deoliveiralucas/deoliveiralucas.github.io
   branch: master
   site_domain: whoami.deoliveiralucas.net/
+  auth_endpoint: auth
+  api_root: https://api.github.com
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
