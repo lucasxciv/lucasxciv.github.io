@@ -61,6 +61,9 @@ const GlobalStyles = createGlobalStyle`
   	width: 100%;
   	height: auto;
   }
+  p {
+    letter-spacing: -1px;
+  }
 
   body.dark {
     --borders: #38444d;

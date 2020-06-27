@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-export const PaginationWrapper = styled.section`
+export const FooterWrapper = styled.section`
   margin: 50px auto auto auto;
   text-align: center;
   border-top: 1px solid var(--borders);
