@@ -99,5 +99,18 @@ module.exports = {
         trackingId: "UA-71909411-1",
       },
     },
+    {
+      resolve: "gatsby-plugin-social-cards",
+      options: {
+        // ommit to skip
+        authorImage: "./static/assets/img/profile-photo.jpeg",
+        // image to use when no cover in frontmatter
+        backgroundImage: "./static/assets/img/profile-photo.jpeg",
+        // author to use when no auth in frontmatter
+        defaultAuthor: "Lucas de Oliveira",
+        // card design
+        design: "default", // 'default' or 'card'
+      },
+    },
   ],
 }
