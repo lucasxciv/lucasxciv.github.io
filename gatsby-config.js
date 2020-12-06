@@ -10,9 +10,9 @@ module.exports = {
         I am currently working as Independent Software Developer and Consultant, living in
         Cruzeiro - São Paulo. I'm a <a href="http://www.zend.com/en/yellow-pages/ZEND027995" target="_blank">
         Zend Certified PHP Engineer</a>, graduated in Database at <a href="http://www.fateccruzeiro.edu.br/" target="_blank">
-        Fatec Cruzeiro </a>, post graduated in Web and Mobile Development at
+        Fatec Cruzeiro</a>, post graduated in Web and Mobile Development at
         <a href="http://unisal.br/unidades/lorena-sao-joaquim/" target="_blank">Unisal Lorena</a> and
-        <a href="https://www.phpvale.com.br/" target="_blank">PHP User Group PHPVale</a> Co-founder.
+        <a href="https://phpvale.github.io/" target="_blank">PHP User Group PHPVale</a> Co-founder.
       </p>`,
     author: `@oliveiralucasbr`,
     siteUrl: `https://deoliveiralucas.net`,
