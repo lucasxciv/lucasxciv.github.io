@@ -151,7 +151,7 @@ Antes de finalizar, vale lembrar que esse post é um visão geral de algumas das
 
 Por fim, adicionei uma interface web e, para não gastar minhas habilidades com CSS (que não existe :P) usei um template pronto do Bootstrap :)
 
-Lembrando que [o código completo está disponível em um repositório no Github](https://github.com/deoliveiralucas/php74-beta-tests) com instruções para clonar e executar. Espero que tenha gostado do post, qualquer dúvida, correção ou dificuldade em executar o código, não deixe de adicionar nos comentários abaixo, se preferir pode me enviar mensagem no Twitter [@oliveiralucasbr](https://twitter.com/oliveiralucasbr) ou no meu e-mail [contato@deoliveiralucas.net](mailto:contato@deoliveiralucas.net).
+Lembrando que [o código completo está disponível em um repositório no Github](https://github.com/deoliveiralucas/php74-beta-tests) com instruções para clonar e executar.
 
 #### Referências
 
