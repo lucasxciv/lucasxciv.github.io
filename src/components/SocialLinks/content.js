@@ -9,7 +9,7 @@ const links = [
   },
   {
     label: "Linkedin",
-    url: "www.linkedin.com/in/lucasxciv",
+    url: "https://linkedin.com/in/lucasxciv",
   },
   {
     label: "StackOverflow",
