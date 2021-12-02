@@ -5,15 +5,15 @@ const links = [
   },
   {
     label: "Twitter",
-    url: "https://twitter.com/oliveiralucasbr",
+    url: "https://twitter.com/lucasxciv",
   },
   {
     label: "Linkedin",
-    url: "https://www.linkedin.com/in/deoliveira-lucas",
+    url: "www.linkedin.com/in/lucasxciv",
   },
   {
     label: "StackOverflow",
-    url: "https://stackoverflow.com/users/7435669/deoliveiralucas",
+    url: "https://stackoverflow.com/users/7435669/lucasxciv",
   },
 ]
 
