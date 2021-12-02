@@ -12,7 +12,7 @@ module.exports = {
         Zend Certified PHP Engineer</a>, graduated in Database at Fatec Cruzeiro, post graduated in Web and Mobile Development at
         Unisal Lorena and <a href="https://phpvale.github.io/" target="_blank">PHP User Group PHPVale</a> Co-founder.
       </p>`,
-    author: `@oliveiralucasbr`,
+    author: `@lucasxciv`,
     siteUrl: `https://deoliveiralucas.net`,
   },
   plugins: [
