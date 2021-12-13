@@ -8,9 +8,9 @@ module.exports = {
       <p> I am a Software Developer. I've been working mainly as PHP Developer since 2013.</p><br />
       <p>
         I am currently working as Independent Software Developer and Consultant, living in
-        Cruzeiro - São Paulo. I'm a <a href="http://www.zend.com/en/yellow-pages/ZEND027995" target="_blank">
-        Zend Certified PHP Engineer</a>, graduated in Database at Fatec Cruzeiro, post graduated in Web and Mobile Development at
-        Unisal Lorena and <a href="https://phpvale.github.io/" target="_blank">PHP User Group PHPVale</a> Co-founder.
+        Cruzeiro - São Paulo. I'm a Zend Certified PHP Engineer, graduated in Database at Fatec Cruzeiro,
+        post graduated in Web and Mobile Development at Unisal Lorena and
+        <a href="https://phpvale.github.io/" target="_blank">PHP User Group PHPVale</a> Co-founder.
       </p>`,
     author: `@lucasxciv`,
     siteUrl: `https://deoliveiralucas.net`,
