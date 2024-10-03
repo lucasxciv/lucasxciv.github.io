@@ -1,9 +1,3 @@
 [build]
 command = "npm run prod"
 publish = "build_production"
-
-[[plugins]]
-    package = "netlify-plugin-php"
-    version = "latest"
-    [plugins.inputs]
-        php_version = "8.3"
