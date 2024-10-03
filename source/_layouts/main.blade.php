@@ -18,7 +18,15 @@
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
         @if ($page->production)
-            <!-- Insert analytics code here -->
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JGS6Q7QNZ"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-2JGS6Q7QNZ');
+            </script>
         @endif
 
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
