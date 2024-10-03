@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://lucasxciv.dev',
+    'baseUrl' => 'https://whoami.lucasxciv.dev',
     'production' => true,
 ];
