@@ -4,7 +4,7 @@ section: content
 title: Utilizando PHP 7, MongoDB e Doctrine
 date: 2016-09-18
 description: Utilizando PHP 7, MongoDB e Doctrine
-excerpt: Nesse post temos uma introdução de como trabalhar com PHP e MongoDB utilizando o framework de persistência Doctrine ODM.
+excerpt: Neste post, faremos uma introdução sobre como trabalhar com PHP e MongoDB utilizando o framework de persistência Doctrine ODM, na versão mais recente do PHP (7). Para ilustrar, criaremos um blog simples usando essas ferramentas.
 categories: [php, php7, mongodb, doctrine]
 ---
 

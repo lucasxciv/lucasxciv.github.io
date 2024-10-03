@@ -4,7 +4,7 @@ section: content
 title: Trabalhando com datas no PHP
 date: 2016-02-11
 description: Trabalhando com manipulação de datas no PHP
-excerpt: Nesse post mostro algumas formas de manipular datas usando PHP.
+excerpt: No PHP, há várias formas de trabalhar com datas, seja com funções e classes nativas ou com bibliotecas externas para formatar, calcular diferenças, verificar dias úteis, entre outras operações. Neste post, mostro como manipular datas em PHP para resolver alguns desses problemas.
 categories: [php, datetime]
 ---
 

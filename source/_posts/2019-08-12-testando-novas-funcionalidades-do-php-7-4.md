@@ -4,7 +4,7 @@ section: content
 title: Testando Novas Funcionalidades do PHP 7.4
 date: 2019-08-12
 description: Testando Novas Funcionalidades do PHP 7.4
-excerpt: Nesse post mostro como fiz para testar as novas funcionalidades da versão 7.4 do PHP ainda em fase beta. Algumas dessas funcionalidades são Typed Properties e Spread Operator, além disso, apresento como fiz para configurar o ambiente usando Docker.
+excerpt: Neste post, vou mostrar como testei as novas funcionalidades da versão 7.4 do PHP, ainda em fase beta. Entre as novidades, destaco as Typed Properties e o Spread Operator. Além disso, explico como configurei o ambiente usando Docker.
 categories: [php, php7, beginner]
 ---
 

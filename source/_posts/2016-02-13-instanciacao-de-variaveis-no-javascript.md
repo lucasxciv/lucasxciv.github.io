@@ -4,7 +4,7 @@ section: content
 title: Instanciação de variáveis no JavaScript
 date: 2016-02-13
 description: Instanciação de variáveis no JavaScript
-excerpt: Nesse post veremos algumas funcionalidades fundamentais presentes no Javascript como, por exemplo, a utilização de variáveis.
+excerpt: Neste post, vamos explorar funcionalidades essenciais do JavaScript, como o uso de variáveis e conceitos importantes, como Hoisting, Closure, IIFE, entre outros.
 categories: [javascript, variable]
 ---
 

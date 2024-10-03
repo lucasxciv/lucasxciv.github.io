@@ -4,7 +4,7 @@ section: content
 title: How to persist Value Object with Doctrine ODM
 date: 2019-06-09
 description: How to persist Value Object with Doctrine ODM
-excerpt: In this post I describe a short review of Value Object and then show how to apply this concept and persist on the database using Doctrine ODM.
+excerpt: In complex domains, developers often use the Value Object pattern to create immutable, valid objects. These value objects are typically persisted in a database with the help of a framework. In this post, I'll briefly review the Value Object pattern and show how to persist it using Doctrine ODM.
 categories: [php, mongodb, doctrine]
 ---
 

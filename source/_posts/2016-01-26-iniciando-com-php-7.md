@@ -4,7 +4,7 @@ section: content
 title: Iniciando com PHP 7
 date: 2016-01-26
 description: Testando algumas novidades do PHP 7
-excerpt: Inicio esse blog testando e descrevendo sobre algumas das novas funcionalidades do PHP 7.
+excerpt: Como primeiro post deste blog — aproveitando que, recentemente (há quase dois meses), foi lançada a tão esperada versão 7 do PHP — vou destacar algumas das mudanças na linguagem, incluindo novas funcionalidades, incompatibilidades e outros aprimoramentos que tornam essa versão uma das mais significativas, talvez a maior desde a 5.3, que trouxe suporte para namespaces.
 categories: [php, php7]
 ---
 
