@@ -58,7 +58,7 @@
             @yield('body')
         </main>
 
-        <footer class="bg-base2 text-center text-sm mt-12 py-4" role="contentinfo">
+        <footer class="bg-base2 text-center text-sm text-base01 mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-none">
                 <li class="md:mr-2">
                     &copy; 2015-{{ date('Y') }} • <a href="https://lucasxciv.dev" title="@lucasxciv" class="text-base01 hover:text-base1">lucasxciv.dev</a> • All rights reserved.
