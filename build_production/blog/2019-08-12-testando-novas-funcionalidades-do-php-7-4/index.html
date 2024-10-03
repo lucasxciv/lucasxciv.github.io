@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Testando Novas Funcionalidades do PHP 7.4">
+
+        <meta property="og:title" content="Testando Novas Funcionalidades do PHP 7.4 | @lucasxciv"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://lucasxciv.dev/blog/2019-08-12-testando-novas-funcionalidades-do-php-7-4"/>
+        <meta property="og:description" content="Testando Novas Funcionalidades do PHP 7.4" />
+
+        <title>Testando Novas Funcionalidades do PHP 7.4 | @lucasxciv</title>
+
+        <link rel="home" href="https://lucasxciv.dev">
+        <link rel="icon" href="/assets/img/logo.jpeg">
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="@lucasxciv Atom Feed">
+
+                    <!-- Insert analytics code here -->
+        
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=63adab265308ca0d59e018de30ed4785">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-base3 text-gray-800 leading-normal font-sans">
+        <header class="flex items-center shadow bg-base2 py-4" role="banner">
+            <div class="container flex items-center max-w-5xl mx-auto px-4 lg:px-8">
+                <div id="vue-search" class="grid mx-auto text-center">
+                    <div class="text-center items-center justify-center">
+                        <img class="h-20 mx-auto shadow border-solid border-4 border-base3 rounded-full" src="/assets/img/logo.jpeg" alt="@lucasxciv logo" />
+                    </div>
+                    <div class="mt-2">
+                        <h1 class="text-2xl text-base01 font-semibold my-0">Lucas de Oliveira</h1>
+                        <h1 class="text-xs text-base01 font-semibold my-0">software developer</h1>
+                    </div>
+
+                    <nav class="hidden lg:flex items-center text-center text-sm mt-4">
+    <a title="@lucasxciv Blog" href="/"
+        class="mx-3 text-base01 hover:text-base1 ">
+        Blog
+    </a>
+
+    <a title="@lucasxciv About" href="/about"
+        class="mx-3 text-base01 hover:text-base1 ">
+        About
+    </a>
+
+    <a title="@lucasxciv Contact"
+       href="https://www.linkedin.com/in/lucasxciv"
+       target="_blank"
+       class="mx-3 text-base01 hover:text-base1">
+        LinkedIn <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup>
+    </a>
+
+    <a title="@lucasxciv Contact"
+       href="https://github.com/lucasxciv"
+       target="_blank"
+       class="mx-3 text-base01 hover:text-base1">
+        GitHub <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup>
+    </a>
+
+    <a title="@lucasxciv Contact"
+       href="https://x.com/lucasxciv"
+       target="_blank"
+       class="mx-3 text-base01 hover:text-base1">
+        Twitter <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup>
+    </a>
+
+    <a title="@lucasxciv Contact"
+       href="https://nostr.lucasxciv.dev"
+       target="_blank"
+       class="mx-3 text-base01 hover:text-base1">
+        Nostr <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup>
+    </a>
+
+    <a title="@lucasxciv Contact"
+       href="https://stackoverflow.com/users/7435669/lucasxciv"
+       target="_blank"
+       class="mx-3 text-base01 hover:text-base1">
+        Stack Overflow <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup>
+    </a>
+</nav>
+
+                    <button class="flex justify-center items-center bg-base3 shadow h-10 px-5 rounded-full lg:hidden focus:outline-none mt-4"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current text-base03 h-9 w-4" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current text-base03 h-9 w-4" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+                </div>
+            </div>
+        </header>
+
+        <nav id="js-nav-menu" class="w-auto px-2 pt-6 pb-2 bg-base2 shadow hidden lg:hidden">
+    <ul class="my-0">
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Blog"
+                href="/"
+                class="block mt-0 mb-4 text-sm text-base01 hover:text-base1 "
+            >Blog</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv About"
+                href="/about"
+                class="block mt-0 mb-4 text-sm text-base01 hover:text-base1 text-base01 hover:text-base1"
+            >About</a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Contact"
+                href="https://www.linkedin.com/in/lucasxciv"
+                target="_blank"
+                class="block mt-0 mb-4 text-sm no-underline text-base01 hover:text-base1"
+            >LinkedIn <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup></a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Contact"
+                href="https://github.com/lucasxciv"
+                target="_blank"
+                class="block mt-0 mb-4 text-sm no-underline text-base01 hover:text-base1"
+            >GitHub <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup></a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Contact"
+                href="https://x.com/lucasxciv"
+                target="_blank"
+                class="block mt-0 mb-4 text-sm no-underline text-base01 hover:text-base1"
+            >Twitter <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup></a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Contact"
+                href="https://nostr.lucasxciv.dev"
+                target="_blank"
+                class="block mt-0 mb-4 text-sm no-underline text-base01 hover:text-base1"
+            >Nostr <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup></a>
+        </li>
+        <li class="pl-4">
+            <a
+                title="@lucasxciv Contact"
+                href="https://stackoverflow.com/users/7435669/lucasxciv"
+                target="_blank"
+                class="block mt-0 mb-4 text-sm no-underline text-base01 hover:text-base1"
+            >Stack Overflow <sup><i class="fa-solid fa-arrow-up-right-from-square opacity-50"></i></sup></a>
+        </li>
+    </ul>
+</nav>
+
+        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
+                
+    <h1 class="leading-none mb-2 text-base01">Testando Novas Funcionalidades do PHP 7.4</h1>
+
+    <p class="text-base0 text-xl md:mt-0">de Oliveira, Lucas  •  August 12, 2019</p>
+
+                        <a
+                href="/blog/categories/php"
+                title="View posts in php"
+                class="inline-block bg-base2 hover:text-base1 leading-loose tracking-wide text-base01 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >php</a>
+                    <a
+                href="/blog/categories/php7"
+                title="View posts in php7"
+                class="inline-block bg-base2 hover:text-base1 leading-loose tracking-wide text-base01 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >php7</a>
+                    <a
+                href="/blog/categories/beginner"
+                title="View posts in beginner"
+                class="inline-block bg-base2 hover:text-base1 leading-loose tracking-wide text-base01 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+            >beginner</a>
+            
+    <div class="border-b border-base2 mb-10 pb-4 text-base01" v-pre>
+        <p>Neste post apresento como fiz para testar as novas funcionalidades da versão 7.4 do PHP que ainda está em fase beta (a versão estável deve ser lançado em novembro de 2019). Como exemplo, criei uma implementação bem simples de um "blog" com cadastro e consulta de posts, sendo os dados armazenados em arquivos <em>JSON</em>. Começo comentando um pouco sobre algumas das novas funcionalidades do PHP 7.4 que foi aplicado no exemplo que desenvolvi, em seguida descrevo como fiz para configurar o ambiente e então concluo com um link para o código completo dos testes que fiz no meu Github.</p>
+
+<h2><em>Typed Properties</em> - Criando as classes para armazenar os posts</h2>
+
+<p>Começando então pelo sistema de tipagem, que no PHP 7.4 foi melhorado com a adição do <em>typed properties</em>, com essa funcionalidade agora é possível definir os tipos das propriedades em classes, sendo necessário informar o modificador de acesso: <code>public</code>, <code>protected</code> ou <code>private</code>; ou <code>var</code>. Para tipos primitivos essa funcionalidade deve funcionar da mesma forma que a de passagem por parâmetro em métodos e funções, por exemplo, por padrão se for definido um tipo <code>int</code> e for passado uma <code>string</code>, o PHP vai tentar converter o tipo de <code>string</code> para <code>int</code>; porém se você quiser desabilitar esse tipo de comportamento e lançar um <code>Fatal Error</code> quando isso acontecer, basta utilizar o <code>declare(strict_types=1)</code>.</p>
+
+<p>Para quem usa IDE ou algum editor que tem autocomplete, essa funcionalidade vai ajudar a identificar o tipo sem precisar utilizar o <code>@var</code> no PHPDoc blocks das propriedades da classe.</p>
+
+<p>Com isso, a classe <code>Post</code> e <code>Author</code> ficou da seguinte forma:</p>
+
+<ul>
+<li>Post.php</li>
+</ul>
+
+<pre><code class="language-php">&lt;?php
+
+class Post
+{
+    public int $id;
+    public string $title;
+    public string $content;
+    public DateTimeImmutable $postedAt;
+    public Author $author;
+}
+</code></pre>
+
+<ul>
+<li>Author.php</li>
+</ul>
+
+<pre><code class="language-php">&lt;?php
+
+class Author
+{
+    public int $id;
+    public string $name;
+    public ?string $profile;
+}
+</code></pre>
+
+<h2><em>Spread Operator</em> em <em>arrays</em> - Adicionando um novo post</h2>
+
+<p>Agora é possível utilizar o <em>spread operator</em> em <em>arrays</em>, dessa forma podemos usá-lo para adicionar um novo post no início do <em>array</em> de posts, tendo um resultado igual ao da função <code>array_unshift</code>.</p>
+
+<pre><code class="language-php">function appendPosts(Post $post, callable $getPosts, callable $storePosts) : void {
+    $storePosts([serializePost($post), ...$getPosts()]);
+}
+</code></pre>
+
+<p>É possível utilizar essa funcionalidade apenas em <em>arrays</em> com chaves numéricas.</p>
+
+<h2><em>Arrow Function</em> - Retornando um autor pelo ID</h2>
+
+<p>Uma das funcionalidades mais esperadas do PHP 7.4 é o <em>Arrow Function</em>, também conhecido como <em>short closure</em>, com ela podemos escrever uma <em>closure</em> de forma mais compacta, sendo assim, no método criado para retornar um autor pelo ID, até a versão 7.3 do PHP teríamos que fazer assim:</p>
+
+<pre><code class="language-php">function getAuthorById(int $authorId) : Author {
+    return array_find(getAuthors(), function (Author $author) use ($authorId) {
+        return $author-&gt;id === $authorId;
+    });
+}
+</code></pre>
+
+<p>Na versão 7.4 podemos ter o mesmo resultado fazendo da seguinte forma:</p>
+
+<pre><code class="language-php">function getAuthorById(int $authorId) : Author {
+    return array_find(getAuthors(), fn(Author $author) =&gt; $author-&gt;id === $authorId);
+}
+</code></pre>
+
+<p>Essa função <code>array_find</code> foi eu que criei para poder retornar um item do array, e ficou assim:</p>
+
+<pre><code class="language-php">function array_find(array $items, callable $callback) {
+    foreach ($items as $item) {
+        if ($callback($item)) {
+            return $item;
+        }
+    }
+    return false;
+}
+</code></pre>
+
+<p>Com <em>Arrow Function</em> será possível escrever funções de uma linha menos verbosas. E no futuro, talvez na versão 8 do PHP, podemos ver essa mesma funcionalidade aceitando mais de uma linha.</p>
+
+<h2>Operador de atribuição <em>null coalescing</em> - Recebendo ação do formulário</h2>
+
+<p>Quando iniciei esse blog, <a href="https://whoami.deoliveiralucas.net/blog/iniciando-com-php-7">o primeiro post que publiquei foi sobre a versão 7.0 do PHP</a>, onde o operador <em>null coalescing</em> tinha sido incluído e melhorado a forma de validar e atribuir valores não definidos ou nulo, na versão 7.4 foi incluído o operador de atribuição <em>null coalescing</em> que pode ser utilizado da mesma forma que os operados de mais <code>+=</code>, menos <code>-=</code> e outros já existentes, sendo assim, para obter a ação enviada pelo formulário e deixar a opção padrão para como <code>load</code>, ao invés de fazer isso:</p>
+
+<pre><code class="language-php">$formInputsFromGet['action'] = $formInputsFromGet['action'] ?? 'load';
+</code></pre>
+
+<p>Podemos fazer isso na versão 7.4:</p>
+
+<pre><code class="language-php">$formInputsFromGet['action'] ??= 'load';
+</code></pre>
+
+<h2>Configurações do ambiente</h2>
+
+<p>Para usar o PHP 7.4 beta usei a imagem do Docker disponível na <a href="https://hub.docker.com/_/php">imagem oficial do PHP no Docker Hub</a>. Se você ainda não utiliza o <a href="https://www.docker.com/resources/what-container">Docker</a>, recomendo pesquise um pouco sobre, instale e comece a utilizar para não precisar ficar instalando várias versões de linguagens, banco de dados, entre outras ferramentas diretamente no sistema operacional da máquina; tenho certeza que vai te ajudar muito, assim como tem me ajudado. Deixei a seguir dois links que podem te ajudar na configuração no Windows e no Linux, caso não saiba como instalar; e já vou avisando que no Linux funciona muito melhor :)</p>
+
+<p><a href="https://www.youtube.com/watch?v=bpbcu36t7g0">Vídeo: Como Instalar o Docker e Docker Compose Ubuntu 18.04</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=OweZAewo54A">Vídeo: Instalando o Docker no Windows</a></p>
+
+<p><a href="https://docs.docker.com/install/">Documentação do Docker: Instalação</a></p>
+
+<p>Com Docker instalado na máquina, primeiro executei um comando que mostra a versão do PHP, isso somente para que seja feito o download das imagens necessárias para executar o container, o comando é o seguinte:</p>
+
+<pre><code class="language-bash">docker run -it --rm -v `pwd`:/php74 -w /php74 -p 8888:8888 php:7.4.0beta1-cli-alpine php -v
+</code></pre>
+
+<p>Basicamente o que esse comando faz é, executa um container com a versão 7.4 beta do PHP, mapeia o diretório que está sendo executado o comando com o diretório <code>/app</code> do container, deixa o diretório de workspace do container como <code>/app</code>, mapeia a porta <code>8888</code> do container com a porta <code>8888</code> da máquina e remove o container assim que é finalizado a execução do comando <code>php -v</code>. Para saber como funciona cada parâmetro desse comando, veja <a href="https://docs.docker.com/engine/reference/run/">sobre o comando <em>run</em> na documentação do site oficial do Docker</a>.</p>
+
+<p>Sendo assim, para ficar mais fácil usá-lo vou criar um <em>alias</em> no terminal com prefixo do comando do Docker:</p>
+
+<pre><code class="language-bash">alias php74="docker run -it --rm -v `pwd`:/php74 -w /php74 -p 8888:8888 php:7.4.0beta1-cli-alpine"
+</code></pre>
+
+<p>A partir de agora para ver a versão do PHP, podemos apenas executar o comando <code>php74 -v</code>, a saída deve ser o seguinte:</p>
+
+<pre><code class="language-bash">&gt; php74 -v
+  PHP 7.4.0beta1 (cli) (built: Aug  2 2019 04:55:36) ( NTS )
+  Copyright (c) The PHP Group
+  Zend Engine v3.4.0-dev, Copyright (c) Zend Technologies
+</code></pre>
+
+<p>E para usar o servidor embutido do PHP:</p>
+
+<pre><code class="language-bash">&gt; php74 -S 0.0.0.0:8888
+</code></pre>
+
+<p>Os comandos para executar o código está disponível no README do <a href="https://github.com/deoliveiralucas/php74-beta-tests">repositório no Github</a>.</p>
+
+<h2>Concluindo - Adicionando uma interface ao blog</h2>
+
+<p>Antes de finalizar, vale lembrar que esse post é um visão geral de algumas das novas funcionalidades e melhorias incluídas no PHP 7.4, para saber mais detalhes <a href="https://stitcher.io/blog/new-in-php-74#null-coalescing-assignment-operator-rfc">acesse o artigo publicado no site stitcher.io</a>, nesse artigo é possível saber também quais foram as melhorias de performance e quais funcionalidades estão sendo descontinuadas, além dos links para as <a href="https://wiki.php.net/rfc">RFC's</a> no site oficial do PHP. É isso, e vem muito mais coisas legais nas próximas versões, quem sabe algo como <em>generic array</em> na versão 8, essa é uma das que mais espero.</p>
+
+<p>Por fim, adicionei uma interface web usando um template pronto do Bootstrap.</p>
+
+<p>Lembrando que <a href="https://github.com/deoliveiralucas/php74-beta-tests">o código completo está disponível em um repositório no Github</a> com instruções para clonar e executar.</p>
+
+<h4>Referências</h4>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=teKnckg5x7I">Talk do Nikita Popov: Typed Properties and more: What’s coming in PHP 7.4?</a></li>
+<li><a href="https://stitcher.io/blog/new-in-php-74#null-coalescing-assignment-operator-rfc">Artigo do site stitcher.io: What's new in PHP 7.4</a></li>
+<li><a href="https://pensandonaweb.com.br/o-que-ha-de-novo-no-php-7-4/">Artigo do Marcel dos Santos: O que há de novo no PHP 7.4?</a></li>
+</ul>
+    </div>
+
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+                            <a href="https://lucasxciv.dev/blog/2019-05-11-how-to-persist-value-object-with-doctrine-odm" title="Older Post: How to persist Value Object with Doctrine ODM" class="text-base01 hover:text-base1">
+                    &LeftArrow; How to persist Value Object with Doctrine ODM
+                </a>
+                    </div>
+
+        <div>
+                    </div>
+    </nav>
+
+    <hr />
+    <script src="https://giscus.app/client.js"
+            data-repo="lucasxciv/lucasxciv.github.io"
+            data-repo-id="MDEwOlJlcG9zaXRvcnk0NzYxOTYwMw=="
+            data-category="Comments"
+            data-category-id="DIC_kwDOAtaeE84CjAD7"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="noborder_light"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+        </main>
+
+        <footer class="bg-base2 text-center text-sm mt-12 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center list-none">
+                <li class="md:mr-2">
+                    &copy; 2015-2024 • <a href="https://lucasxciv.dev" title="@lucasxciv" class="text-base01 hover:text-base1">lucasxciv.dev</a> • All rights reserved.
+                </li>
+            </ul>
+        </footer>
+
+        <script src="/assets/build/js/main.js?id=e4a964d2b186fcedcfeb820ced60e3fb"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+    </body>
+</html>
