@@ -3,7 +3,7 @@ title: Blog
 description: The list of blog posts published by @lucasxciv.
 pagination:
     collection: posts
-    perPage: 21
+    perPage: 12
 ---
 @extends('_layouts.main')
 
@@ -23,7 +23,7 @@ pagination:
                 <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
+                    class="bg-base2 text-base01 hover:text-base1 rounded mr-3 px-5 py-3"
                 >&LeftArrow;</a>
             @endif
 
@@ -31,7 +31,7 @@ pagination:
                 <a
                     href="{{ $path }}"
                     title="Go to Page {{ $pageNumber }}"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-600' : 'text-blue-700' }}"
+                    class="bg-base2 hover:text-base1 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-base01 underline shadow' : 'text-base01' }}"
                 >{{ $pageNumber }}</a>
             @endforeach
 
@@ -39,7 +39,7 @@ pagination:
                     <a
                         href="{{ $next }}"
                         title="Next Page"
-                        class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
+                        class="bg-base2 text-base01 hover:text-base1 rounded mr-3 px-5 py-3"
                     >&RightArrow;</a>
                 @endif
         </nav>
