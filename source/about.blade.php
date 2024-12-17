@@ -7,7 +7,7 @@ description: A little bit about the site
 @section('body')
     <h1>About me</h1>
 
-    <img src="/assets/img/about-me.jpg"
+    <img src="/assets/img/about-me.png"
         alt="About me"
         class="flex rounded-lg border-4 border-base2 shadow w-64 bg-contain mx-auto md:float-right my-6 md:ml-10">
 
