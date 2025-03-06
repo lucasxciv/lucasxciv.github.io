@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/lucasxciv
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://whoami.lucasxciv.dev
+  * I am lucasxciv (https://keybase.io/lucasxciv) on keybase.
+  * I have a public key ASDdFQq9fR4YYXd2NGTtcbwt80DA3-Bk_uvxUmcbg_M0tQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120dd150abd7d1e186177763464ed71bc2df340c0dfe064feebf152671b83f334b50a",
+      "host": "keybase.io",
+      "kid": "0120dd150abd7d1e186177763464ed71bc2df340c0dfe064feebf152671b83f334b50a",
+      "uid": "95c06c09fcc89f19f5fb3c3b66972d19",
+      "username": "lucasxciv"
+    },
+    "merkle_root": {
+      "ctime": 1741301639,
+      "hash": "9970ce17a5697030cad424816dad55bf310384900c489e4a29361d4485259f7a5f26ebee3dd2a425b0f81bf3098bac49653a0cab563df9f42f52a74b3ba1ce4e",
+      "hash_meta": "d4586966044af7f128acf2df171bfd35151c2bc926cfdbf245f2e8d239b8c062",
+      "seqno": 26606672
+    },
+    "service": {
+      "entropy": "O7rosR0A31mNSwoVntq8OlQq",
+      "hostname": "whoami.lucasxciv.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1741301670,
+  "expire_in": 504576000,
+  "prev": "ff8413c1beeac2b7f131681b921153ecb1bc103bb7061cd373ea6a3fdd10e7a2",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg3RUKvX0eGGF3djRk7XG8LfNAwN/gZP7r8VJnG4PzNLUKp3BheWxvYWTESpcCBcQg/4QTwb7qwrfxMWgbkhFT7LG8EDu3BhzTc+pqP90Q56LEINTzQb5JWE2tmR33TV00NPtLRXE3c1Nk9JpZyMonipeSAgHCo3NpZ8RANlemeDKQs2IWGewgrWCQREbXnIaE/GuJ8T2NCU0N/HG7VKghk7pgDdlaaNXVA1YcPDQwprwxdkiXnyqqsWS3CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKjOTgxdwkaSeb/NvfuQas3d/VPQtjAI5DsG754rqgw+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/lucasxciv
+
+==================================================================
