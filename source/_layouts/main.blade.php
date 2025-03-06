@@ -41,8 +41,10 @@
                         <img class="h-20 mx-auto shadow border-solid border-4 border-base3 rounded-full" src="/assets/img/logo.jpeg" alt="{{ $page->siteName }} logo" />
                     </div>
                     <div class="mt-2">
+                        <h1 class="text-xs text-base01 font-semibold my-0">♰</h1>
                         <h1 class="text-2xl text-base01 font-semibold my-0">Lucas de Oliveira</h1>
                         <h1 class="text-xs text-base01 font-semibold my-0">software developer</h1>
+                        <a href="https://keybase.io/lucasxciv"><span class="text-xs text-base01 font-semibold">🗝️ FEDC EA26 02E3 BB1D</span></a>
                     </div>
 
                     @include('_nav.menu')
